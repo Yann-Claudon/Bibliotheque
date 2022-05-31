@@ -1,6 +1,6 @@
 ﻿namespace Bibliotheque
 {
-    partial class frmAjoutAuteur
+    partial class AjoutAuteur
     {
         /// <summary>
         /// Required designer variable.
@@ -89,13 +89,13 @@
             this.txtbox_nom.TabIndex = 0;
             this.txtbox_nom.Text = "Prénom Nom";
             // 
-            // frmAjoutAuteur
+            // AjoutAuteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(248, 200);
             this.Controls.Add(this.grpBox_AjoutAuteur);
-            this.Name = "frmAjoutAuteur";
+            this.Name = "AjoutAuteur";
             this.Text = "Bibliothèeque - Ajout auteur";
             this.grpBox_AjoutAuteur.ResumeLayout(false);
             this.grpBox_AjoutAuteur.PerformLayout();

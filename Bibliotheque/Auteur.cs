@@ -26,7 +26,8 @@ namespace Bibliotheque
 
         private void btn_ajoutAuteur_Click(object sender, EventArgs e)
         {
-
+            AjoutAuteur ajoutAuteur = new AjoutAuteur();
+            ajoutAuteur.Show();
         }
     }
 }

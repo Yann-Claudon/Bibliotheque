@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Bibliotheque
 {
-    public partial class frmAjoutAuteur : Form
+    public partial class AjoutAuteur : Form
     {
-        public frmAjoutAuteur()
+        public AjoutAuteur()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace Bibliotheque
 
         private void btn_ajouterAuteur_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=.\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True");
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into author (name_author,birthday_author) values (@Nom,@Naissance)", con);
             cmd.Parameters.AddWithValue("@Nom", txtbox_nom.Text);
