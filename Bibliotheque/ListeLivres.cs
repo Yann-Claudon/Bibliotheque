@@ -19,6 +19,10 @@ namespace Bibliotheque
 
         private void ListeLivres_Load(object sender, EventArgs e)
         {
+            // TODO: cette ligne de code charge les données dans la table 'bibliothequeBDD.book'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.bookTableAdapter.Fill(this.bibliothequeBDD.book);
+            // TODO: cette ligne de code charge les données dans la table 'bibliothequeBDD.author'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.authorTableAdapter.Fill(this.bibliothequeBDD.author);
 
         }
 
@@ -27,6 +31,17 @@ namespace Bibliotheque
             Accueil accueil = new Accueil();
             accueil.Show();
             Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_ajoutLivre_Click(object sender, EventArgs e)
+        {
+            AjoutLivre ajoutLivre = new AjoutLivre();
+            ajoutLivre.ShowDialog();
         }
     }
 }

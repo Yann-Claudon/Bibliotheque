@@ -47,6 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutLivre.Designer.cs">
+      <DependentUpon>AjoutLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bibliothequeBDD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bibliothequeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +89,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjoutLivre.resx">
+      <DependentUpon>AjoutLivre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Auteur.resx">
       <DependentUpon>Auteur.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +113,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bibliothequeBDD.xsc">
+      <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
+    </None>
+    <None Include="bibliothequeBDD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bibliothequeBDD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bibliothequeBDD.xss">
+      <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
+    </None>
     <None Include="bibliothequeDataSet.xsc">
       <DependentUpon>bibliothequeDataSet.xsd</DependentUpon>
     </None>
