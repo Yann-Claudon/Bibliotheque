@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bibliothequeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliothequeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Accueil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +64,31 @@
     <Compile Include="ListeLivres.Designer.cs">
       <DependentUpon>ListeLivres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Auteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auteur.Designer.cs">
+      <DependentUpon>Auteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutAuteur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutAuteur.Designer.cs">
+      <DependentUpon>AjoutAuteur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Auteur.resx">
+      <DependentUpon>Auteur.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeLivres.resx">
       <DependentUpon>ListeLivres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutAuteur.resx">
+      <DependentUpon>AjoutAuteur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +99,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bibliothequeDataSet.xsc">
+      <DependentUpon>bibliothequeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bibliothequeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bibliothequeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bibliothequeDataSet.xss">
+      <DependentUpon>bibliothequeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
