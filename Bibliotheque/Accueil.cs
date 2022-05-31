@@ -29,8 +29,9 @@ namespace Bibliotheque
 
         private void btn_auteurs_Click(object sender, EventArgs e)
         {
-            Auteur auteur = new Auteur();
+            ListeAuteurs auteur = new ListeAuteurs();
             auteur.Show();
+            Hide();
         }
 
         private void btn_livres_Click(object sender, EventArgs e)

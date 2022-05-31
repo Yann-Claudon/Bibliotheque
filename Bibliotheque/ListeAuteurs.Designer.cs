@@ -1,6 +1,6 @@
 ﻿namespace Bibliotheque
 {
-    partial class Auteur
+    partial class ListeAuteurs
     {
         /// <summary>
         /// Required designer variable.
@@ -36,15 +36,17 @@
             this.btn_supprAuteur = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgridview_auteur = new System.Windows.Forms.DataGridView();
-            this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
-            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
             this.idauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birthdayauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
+            this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_modif = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_auteur)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Titre
@@ -74,10 +76,11 @@
             this.btn_accueil.TabIndex = 1;
             this.btn_accueil.Text = "Retour à l\'accueil";
             this.btn_accueil.UseVisualStyleBackColor = true;
+            this.btn_accueil.Click += new System.EventHandler(this.btn_accueil_Click);
             // 
             // btn_ajoutAuteur
             // 
-            this.btn_ajoutAuteur.Location = new System.Drawing.Point(269, 156);
+            this.btn_ajoutAuteur.Location = new System.Drawing.Point(196, 156);
             this.btn_ajoutAuteur.Name = "btn_ajoutAuteur";
             this.btn_ajoutAuteur.Size = new System.Drawing.Size(75, 23);
             this.btn_ajoutAuteur.TabIndex = 2;
@@ -87,12 +90,13 @@
             // 
             // btn_supprAuteur
             // 
-            this.btn_supprAuteur.Location = new System.Drawing.Point(429, 156);
+            this.btn_supprAuteur.Location = new System.Drawing.Point(489, 156);
             this.btn_supprAuteur.Name = "btn_supprAuteur";
             this.btn_supprAuteur.Size = new System.Drawing.Size(118, 23);
             this.btn_supprAuteur.TabIndex = 3;
             this.btn_supprAuteur.Text = "Suppression auteur";
             this.btn_supprAuteur.UseVisualStyleBackColor = true;
+            this.btn_supprAuteur.Click += new System.EventHandler(this.btn_supprAuteur_Click);
             // 
             // textBox1
             // 
@@ -104,7 +108,6 @@
             // dgridview_auteur
             // 
             this.dgridview_auteur.AllowUserToAddRows = false;
-            this.dgridview_auteur.AllowUserToDeleteRows = false;
             this.dgridview_auteur.AutoGenerateColumns = false;
             this.dgridview_auteur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgridview_auteur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -114,53 +117,70 @@
             this.dgridview_auteur.DataSource = this.authorBindingSource;
             this.dgridview_auteur.Location = new System.Drawing.Point(29, 203);
             this.dgridview_auteur.Name = "dgridview_auteur";
-            this.dgridview_auteur.ReadOnly = true;
             this.dgridview_auteur.Size = new System.Drawing.Size(744, 218);
             this.dgridview_auteur.TabIndex = 5;
             // 
-            // bibliothequeDataSet
+            // idauthorDataGridViewTextBoxColumn
             // 
-            this.bibliothequeDataSet.DataSetName = "bibliothequeDataSet";
-            this.bibliothequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.idauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.idauthorDataGridViewTextBoxColumn.DataPropertyName = "id_author";
+            this.idauthorDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idauthorDataGridViewTextBoxColumn.Name = "idauthorDataGridViewTextBoxColumn";
+            // 
+            // nameauthorDataGridViewTextBoxColumn
+            // 
+            this.nameauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameauthorDataGridViewTextBoxColumn.DataPropertyName = "name_author";
+            this.nameauthorDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nameauthorDataGridViewTextBoxColumn.Name = "nameauthorDataGridViewTextBoxColumn";
+            // 
+            // birthdayauthorDataGridViewTextBoxColumn
+            // 
+            this.birthdayauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.birthdayauthorDataGridViewTextBoxColumn.DataPropertyName = "birthday_author";
+            this.birthdayauthorDataGridViewTextBoxColumn.HeaderText = "Naissance";
+            this.birthdayauthorDataGridViewTextBoxColumn.Name = "birthdayauthorDataGridViewTextBoxColumn";
             // 
             // authorBindingSource
             // 
             this.authorBindingSource.DataMember = "author";
             this.authorBindingSource.DataSource = this.bibliothequeDataSet;
             // 
+            // bibliothequeDataSet
+            // 
+            this.bibliothequeDataSet.DataSetName = "bibliothequeDataSet";
+            this.bibliothequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // authorTableAdapter
             // 
             this.authorTableAdapter.ClearBeforeFill = true;
             // 
-            // idauthorDataGridViewTextBoxColumn
+            // comboBox1
             // 
-            this.idauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idauthorDataGridViewTextBoxColumn.DataPropertyName = "id_author";
-            this.idauthorDataGridViewTextBoxColumn.HeaderText = "id_author";
-            this.idauthorDataGridViewTextBoxColumn.Name = "idauthorDataGridViewTextBoxColumn";
-            this.idauthorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(615, 106);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // nameauthorDataGridViewTextBoxColumn
+            // btn_modif
             // 
-            this.nameauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameauthorDataGridViewTextBoxColumn.DataPropertyName = "name_author";
-            this.nameauthorDataGridViewTextBoxColumn.HeaderText = "name_author";
-            this.nameauthorDataGridViewTextBoxColumn.Name = "nameauthorDataGridViewTextBoxColumn";
-            this.nameauthorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btn_modif.Location = new System.Drawing.Point(324, 156);
+            this.btn_modif.Name = "btn_modif";
+            this.btn_modif.Size = new System.Drawing.Size(115, 23);
+            this.btn_modif.TabIndex = 7;
+            this.btn_modif.Text = "Modification auteur";
+            this.btn_modif.UseVisualStyleBackColor = true;
+            this.btn_modif.Click += new System.EventHandler(this.btn_modif_Click);
             // 
-            // birthdayauthorDataGridViewTextBoxColumn
-            // 
-            this.birthdayauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.birthdayauthorDataGridViewTextBoxColumn.DataPropertyName = "birthday_author";
-            this.birthdayauthorDataGridViewTextBoxColumn.HeaderText = "birthday_author";
-            this.birthdayauthorDataGridViewTextBoxColumn.Name = "birthdayauthorDataGridViewTextBoxColumn";
-            this.birthdayauthorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Auteur
+            // ListeAuteurs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_modif);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dgridview_auteur);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_supprAuteur);
@@ -168,12 +188,12 @@
             this.Controls.Add(this.btn_accueil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Titre);
-            this.Name = "Auteur";
+            this.Name = "ListeAuteurs";
             this.Text = "Bibliothèque - Liste auteurs";
             this.Load += new System.EventHandler(this.Auteur_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_auteur)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +214,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idauthorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameauthorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn birthdayauthorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_modif;
     }
 }

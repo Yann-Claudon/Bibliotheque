@@ -64,11 +64,11 @@
     <Compile Include="ListeLivres.Designer.cs">
       <DependentUpon>ListeLivres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Auteur.cs">
+    <Compile Include="ListeAuteurs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Auteur.Designer.cs">
-      <DependentUpon>Auteur.cs</DependentUpon>
+    <Compile Include="ListeAuteurs.Designer.cs">
+      <DependentUpon>ListeAuteurs.cs</DependentUpon>
     </Compile>
     <Compile Include="AjoutAuteur.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Auteur.resx">
-      <DependentUpon>Auteur.cs</DependentUpon>
+    <EmbeddedResource Include="ListeAuteurs.resx">
+      <DependentUpon>ListeAuteurs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>

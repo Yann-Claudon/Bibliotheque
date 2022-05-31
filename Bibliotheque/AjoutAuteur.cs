@@ -17,33 +17,7 @@ namespace Bibliotheque
         {
             InitializeComponent();
         }
-        public string Nom
-        {
-            get
-            {
-                return txtbox_nom.Text;
-            }
-            set
-            {
-                txtbox_nom.Text = value;
-            }
-        }
-        public string Naissance
-        {
-            get
-            {
-                return txtbox_naissance.Text;
-            }
-            set
-            {
-                txtbox_naissance.Text = value;
-            }
-        }
-        public void setAuteur(string nom, string naissance)
-        {
-            txtbox_nom.Text = nom;
-            txtbox_naissance.Text = naissance;
-        }
+        
 
         private void btn_ajouterAuteur_Click(object sender, EventArgs e)
         {
@@ -55,7 +29,9 @@ namespace Bibliotheque
             cmd.ExecuteNonQuery();
 
             con.Close();
+            Close();
             MessageBox.Show("La création à été effectué");
+            
 
         }
     }
