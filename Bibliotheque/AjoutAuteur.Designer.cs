@@ -30,16 +30,16 @@
         {
             this.gBox_AjoutAuteur = new System.Windows.Forms.GroupBox();
             this.btn_annulerAuteur = new System.Windows.Forms.Button();
-            this.txtbox_naissance = new System.Windows.Forms.TextBox();
             this.btn_ajouterAuteur = new System.Windows.Forms.Button();
             this.txtbox_nom = new System.Windows.Forms.TextBox();
+            this.txtbox_naissance = new System.Windows.Forms.MaskedTextBox();
             this.gBox_AjoutAuteur.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBox_AjoutAuteur
             // 
-            this.gBox_AjoutAuteur.Controls.Add(this.btn_annulerAuteur);
             this.gBox_AjoutAuteur.Controls.Add(this.txtbox_naissance);
+            this.gBox_AjoutAuteur.Controls.Add(this.btn_annulerAuteur);
             this.gBox_AjoutAuteur.Controls.Add(this.btn_ajouterAuteur);
             this.gBox_AjoutAuteur.Controls.Add(this.txtbox_nom);
             this.gBox_AjoutAuteur.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -59,15 +59,6 @@
             this.btn_annulerAuteur.TabIndex = 5;
             this.btn_annulerAuteur.Text = "Annuler";
             this.btn_annulerAuteur.UseVisualStyleBackColor = true;
-            // 
-            // txtbox_naissance
-            // 
-            this.txtbox_naissance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbox_naissance.Location = new System.Drawing.Point(60, 73);
-            this.txtbox_naissance.Name = "txtbox_naissance";
-            this.txtbox_naissance.Size = new System.Drawing.Size(100, 25);
-            this.txtbox_naissance.TabIndex = 4;
-            this.txtbox_naissance.Text = "jj/mm/aaaa";
             // 
             // btn_ajouterAuteur
             // 
@@ -89,6 +80,16 @@
             this.txtbox_nom.TabIndex = 0;
             this.txtbox_nom.Text = "Prénom Nom";
             // 
+            // txtbox_naissance
+            // 
+            this.txtbox_naissance.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_naissance.Location = new System.Drawing.Point(60, 72);
+            this.txtbox_naissance.Mask = "00/00/0000";
+            this.txtbox_naissance.Name = "txtbox_naissance";
+            this.txtbox_naissance.Size = new System.Drawing.Size(100, 25);
+            this.txtbox_naissance.TabIndex = 6;
+            this.txtbox_naissance.ValidatingType = typeof(System.DateTime);
+            // 
             // AjoutAuteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,8 +108,8 @@
 
         private System.Windows.Forms.GroupBox gBox_AjoutAuteur;
         private System.Windows.Forms.Button btn_annulerAuteur;
-        private System.Windows.Forms.TextBox txtbox_naissance;
         private System.Windows.Forms.Button btn_ajouterAuteur;
         private System.Windows.Forms.TextBox txtbox_nom;
+        private System.Windows.Forms.MaskedTextBox txtbox_naissance;
     }
 }

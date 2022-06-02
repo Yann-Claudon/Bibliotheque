@@ -69,6 +69,12 @@
     <Compile Include="AjoutEditeur.Designer.cs">
       <DependentUpon>AjoutEditeur.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeFormats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeFormats.Designer.cs">
+      <DependentUpon>ListeFormats.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListeEditeurs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AjoutEditeur.resx">
       <DependentUpon>AjoutEditeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeFormats.resx">
+      <DependentUpon>ListeFormats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeEditeurs.resx">
       <DependentUpon>ListeEditeurs.cs</DependentUpon>

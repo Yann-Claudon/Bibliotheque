@@ -36,9 +36,6 @@
             this.btn_supprAuteur = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgridview_auteur = new System.Windows.Forms.DataGridView();
-            this.idauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdayauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
             this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
@@ -107,38 +104,12 @@
             // dgridview_auteur
             // 
             this.dgridview_auteur.AllowUserToAddRows = false;
-            this.dgridview_auteur.AutoGenerateColumns = false;
+            this.dgridview_auteur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridview_auteur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridview_auteur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idauthorDataGridViewTextBoxColumn,
-            this.nameauthorDataGridViewTextBoxColumn,
-            this.birthdayauthorDataGridViewTextBoxColumn});
-            this.dgridview_auteur.DataSource = this.authorBindingSource;
             this.dgridview_auteur.Location = new System.Drawing.Point(44, 203);
             this.dgridview_auteur.Name = "dgridview_auteur";
             this.dgridview_auteur.Size = new System.Drawing.Size(744, 218);
             this.dgridview_auteur.TabIndex = 5;
-            // 
-            // idauthorDataGridViewTextBoxColumn
-            // 
-            this.idauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idauthorDataGridViewTextBoxColumn.DataPropertyName = "id_author";
-            this.idauthorDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idauthorDataGridViewTextBoxColumn.Name = "idauthorDataGridViewTextBoxColumn";
-            // 
-            // nameauthorDataGridViewTextBoxColumn
-            // 
-            this.nameauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameauthorDataGridViewTextBoxColumn.DataPropertyName = "name_author";
-            this.nameauthorDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nameauthorDataGridViewTextBoxColumn.Name = "nameauthorDataGridViewTextBoxColumn";
-            // 
-            // birthdayauthorDataGridViewTextBoxColumn
-            // 
-            this.birthdayauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.birthdayauthorDataGridViewTextBoxColumn.DataPropertyName = "birthday_author";
-            this.birthdayauthorDataGridViewTextBoxColumn.HeaderText = "Naissance";
-            this.birthdayauthorDataGridViewTextBoxColumn.Name = "birthdayauthorDataGridViewTextBoxColumn";
             // 
             // authorBindingSource
             // 
@@ -200,9 +171,6 @@
         private bibliothequeDataSet bibliothequeDataSet;
         private System.Windows.Forms.BindingSource authorBindingSource;
         private bibliothequeDataSetTableAdapters.authorTableAdapter authorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idauthorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameauthorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayauthorDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_modif;
     }
 }

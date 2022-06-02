@@ -23,7 +23,18 @@ namespace Bibliotheque
         private void Auteur_Load(object sender, EventArgs e)
         {
             // TODO: cette ligne de code charge les données dans la table 'bibliothequeDataSet.author'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.authorTableAdapter.Fill(this.bibliothequeDataSet.author);
+            //this.authorTableAdapter.Fill(this.bibliothequeDataSet.author);
+            
+            var select = "SELECT id_author as 'ID', name_author as 'Prénom Nom' FROM author";
+            var c = new SqlConnection(connstring); // Your Connection String here
+            var dataAdapter = new SqlDataAdapter(select, c);
+
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            //dgridview_auteur.ReadOnly = false;
+            dgridview_auteur.DataSource = ds.Tables[0];
+
 
         }
 
@@ -38,7 +49,6 @@ namespace Bibliotheque
 
         private void btn_supprAuteur_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(this.dgridview_auteur.CurrentCell.ColumnIndex.ToString());
 
             if (this.dgridview_auteur.SelectedRows.Count > 0)
             {
@@ -63,20 +73,6 @@ namespace Bibliotheque
             Close();
         }
 
-        /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection("connstring");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM author", con);
-            SqlDataReader sqlReader = cmd.ExecuteReader();
-
-            while (sqlReader.Read())
-            {
-                this.comboBox1.Items.Add(sqlReader["name_author"].ToString());
-            }
-
-            sqlReader.Close();
-        }*/
 
         private void btn_modif_Click(object sender, EventArgs e)
         {
@@ -92,5 +88,8 @@ namespace Bibliotheque
 
             MessageBox.Show("Modification réussie");
         }
+
+        // return a list of the first n Fibonnaci numbers
+
     }
 }
