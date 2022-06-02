@@ -30,8 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gbox_livre = new System.Windows.Forms.GroupBox();
-            this.cmbbox_auteur = new System.Windows.Forms.ComboBox();
+            this.cmbbox_genre = new System.Windows.Forms.ComboBox();
             this.bibliothequeBDD = new Bibliotheque.bibliothequeBDD();
+            this.cmbbox_auteur = new System.Windows.Forms.ComboBox();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_ajout = new System.Windows.Forms.Button();
             this.cmbbox_format = new System.Windows.Forms.ComboBox();
@@ -43,7 +44,6 @@
             this.bookTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
             this.bibliothequeBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.gbox_livre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bibliothequeBDD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
@@ -53,7 +53,7 @@
             // 
             // gbox_livre
             // 
-            this.gbox_livre.Controls.Add(this.listBox1);
+            this.gbox_livre.Controls.Add(this.cmbbox_genre);
             this.gbox_livre.Controls.Add(this.cmbbox_auteur);
             this.gbox_livre.Controls.Add(this.btn_annuler);
             this.gbox_livre.Controls.Add(this.btn_ajout);
@@ -69,7 +69,24 @@
             this.gbox_livre.TabIndex = 0;
             this.gbox_livre.TabStop = false;
             this.gbox_livre.Text = "Ajouter un livre";
-            this.gbox_livre.Enter += new System.EventHandler(this.gbox_livre_Enter);
+            // 
+            // cmbbox_genre
+            // 
+            this.cmbbox_genre.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bibliothequeBDD, "genre.name_genre", true));
+            this.cmbbox_genre.DataSource = this.bibliothequeBDD;
+            this.cmbbox_genre.DisplayMember = "genre.name_genre";
+            this.cmbbox_genre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbbox_genre.FormattingEnabled = true;
+            this.cmbbox_genre.Location = new System.Drawing.Point(20, 140);
+            this.cmbbox_genre.Name = "cmbbox_genre";
+            this.cmbbox_genre.Size = new System.Drawing.Size(149, 25);
+            this.cmbbox_genre.TabIndex = 9;
+            this.cmbbox_genre.ValueMember = "genre.name_genre";
+            // 
+            // bibliothequeBDD
+            // 
+            this.bibliothequeBDD.DataSetName = "bibliothequeBDD";
+            this.bibliothequeBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cmbbox_auteur
             // 
@@ -82,11 +99,6 @@
             this.cmbbox_auteur.Size = new System.Drawing.Size(149, 25);
             this.cmbbox_auteur.TabIndex = 8;
             this.cmbbox_auteur.ValueMember = "author.name_author";
-            // 
-            // bibliothequeBDD
-            // 
-            this.bibliothequeBDD.DataSetName = "bibliothequeBDD";
-            this.bibliothequeBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_annuler
             // 
@@ -108,6 +120,7 @@
             this.btn_ajout.TabIndex = 6;
             this.btn_ajout.Text = "Ajouter";
             this.btn_ajout.UseVisualStyleBackColor = true;
+            this.btn_ajout.Click += new System.EventHandler(this.btn_ajout_Click);
             // 
             // cmbbox_format
             // 
@@ -150,6 +163,7 @@
             this.txtbox_datePublication.Size = new System.Drawing.Size(149, 25);
             this.txtbox_datePublication.TabIndex = 1;
             this.txtbox_datePublication.Text = "Année de publication";
+            this.txtbox_datePublication.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbox_datePublication_KeyPress);
             // 
             // txtbox_nom
             // 
@@ -178,18 +192,6 @@
             // 
             this.bibliothequeBDDBindingSource1.DataSource = this.bibliothequeBDD;
             this.bibliothequeBDDBindingSource1.Position = 0;
-            // 
-            // listBox1
-            // 
-            this.listBox1.DataSource = this.bibliothequeBDD;
-            this.listBox1.DisplayMember = "genre.name_genre";
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 27;
-            this.listBox1.Location = new System.Drawing.Point(20, 134);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(149, 31);
-            this.listBox1.TabIndex = 9;
-            this.listBox1.ValueMember = "genre.name_genre";
             // 
             // AjoutLivre
             // 
@@ -226,6 +228,6 @@
         private System.Windows.Forms.BindingSource bibliothequeBDDBindingSource;
         private System.Windows.Forms.BindingSource bibliothequeBDDBindingSource1;
         private System.Windows.Forms.ComboBox cmbbox_auteur;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox cmbbox_genre;
     }
 }
