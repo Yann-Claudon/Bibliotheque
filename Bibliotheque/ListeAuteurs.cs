@@ -31,7 +31,7 @@ namespace Bibliotheque
         {
             //Ouvre le formulaire d'ajout d'un auteur
             AjoutAuteur ajoutAuteur = new AjoutAuteur();
-            ajoutAuteur.Show();
+            ajoutAuteur.ShowDialog();
             Close();
             
         }
@@ -63,7 +63,7 @@ namespace Bibliotheque
             Close();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection("connstring");
             con.Open();
@@ -76,7 +76,7 @@ namespace Bibliotheque
             }
 
             sqlReader.Close();
-        }
+        }*/
 
         private void btn_modif_Click(object sender, EventArgs e)
         {

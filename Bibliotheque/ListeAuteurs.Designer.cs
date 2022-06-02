@@ -42,7 +42,6 @@
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
             this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_modif = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_auteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
@@ -115,7 +114,7 @@
             this.nameauthorDataGridViewTextBoxColumn,
             this.birthdayauthorDataGridViewTextBoxColumn});
             this.dgridview_auteur.DataSource = this.authorBindingSource;
-            this.dgridview_auteur.Location = new System.Drawing.Point(29, 203);
+            this.dgridview_auteur.Location = new System.Drawing.Point(44, 203);
             this.dgridview_auteur.Name = "dgridview_auteur";
             this.dgridview_auteur.Size = new System.Drawing.Size(744, 218);
             this.dgridview_auteur.TabIndex = 5;
@@ -155,15 +154,6 @@
             // 
             this.authorTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(615, 106);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // btn_modif
             // 
             this.btn_modif.Location = new System.Drawing.Point(324, 156);
@@ -180,7 +170,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_modif);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dgridview_auteur);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_supprAuteur);
@@ -214,7 +203,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idauthorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameauthorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn birthdayauthorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_modif;
     }
 }

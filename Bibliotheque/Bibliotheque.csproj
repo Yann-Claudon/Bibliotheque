@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bibliothequeBDD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bibliothequeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -57,6 +62,18 @@
     </Compile>
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutEditeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutEditeur.Designer.cs">
+      <DependentUpon>AjoutEditeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeEditeurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeEditeurs.Designer.cs">
+      <DependentUpon>ListeEditeurs.cs</DependentUpon>
     </Compile>
     <Compile Include="ListeLivres.cs">
       <SubType>Form</SubType>
@@ -78,6 +95,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjoutEditeur.resx">
+      <DependentUpon>AjoutEditeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeEditeurs.resx">
+      <DependentUpon>ListeEditeurs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListeAuteurs.resx">
       <DependentUpon>ListeAuteurs.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +122,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bibliothequeBDD.xsc">
+      <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
+    </None>
+    <None Include="bibliothequeBDD.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bibliothequeBDD.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bibliothequeBDD.xss">
+      <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
+    </None>
     <None Include="bibliothequeDataSet.xsc">
       <DependentUpon>bibliothequeDataSet.xsd</DependentUpon>
     </None>
