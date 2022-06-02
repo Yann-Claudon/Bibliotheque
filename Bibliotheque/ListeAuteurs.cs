@@ -32,6 +32,7 @@ namespace Bibliotheque
             //Ouvre le formulaire d'ajout d'un auteur
             AjoutAuteur ajoutAuteur = new AjoutAuteur();
             ajoutAuteur.Show();
+            Close();
             
         }
 
@@ -89,7 +90,7 @@ namespace Bibliotheque
 
             con.Close();
 
-            MessageBox.Show("Modification réussi");
+            MessageBox.Show("Modification réussie");
         }
     }
 }

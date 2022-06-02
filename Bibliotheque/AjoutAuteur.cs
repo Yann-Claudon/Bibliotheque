@@ -30,7 +30,9 @@ namespace Bibliotheque
 
             con.Close();
             Close();
-            MessageBox.Show("La création à été effectué");
+            ListeAuteurs listeAuteurs = new ListeAuteurs();
+            listeAuteurs.Show();
+            MessageBox.Show("La création à été effectuée");
             
 
         }
