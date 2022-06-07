@@ -32,9 +32,20 @@ namespace Bibliotheque
             Close();
             ListeAuteurs listeAuteurs = new ListeAuteurs();
             listeAuteurs.Show();
-            MessageBox.Show("La création à été effectuée");
+            MessageBox.Show("La création a été effectuée");
             
+        }
 
+        private void txtbox_nom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_annulerAuteur_Click(object sender, EventArgs e)
+        {
+            Close();
+            ListeAuteurs listeAuteurs = new ListeAuteurs();
+            listeAuteurs.Show();
         }
     }
 }
