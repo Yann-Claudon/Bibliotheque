@@ -27,7 +27,9 @@ namespace Bibliotheque
             cmd.Parameters.AddWithValue("@Nom", txtbox_nom.Text);
             cmd.Parameters.AddWithValue("@Naissance", txtbox_naissance.Text);
 
-            SqlCommand cmdverif = new SqlCommand("SELECT name_author, birthday_author FROM author WHERE name_author LIKE @Nom AND birthday_author == @Naissance", con);
+            SqlCommand cmdverif = new SqlCommand("SELECT name_author, birthday_author FROM author WHERE name_author LIKE @Nom AND birthday_author = @Naissance", con);
+            cmdverif.Parameters.AddWithValue("@Nom", txtbox_nom.Text);
+            cmdverif.Parameters.AddWithValue("@Naissance", txtbox_naissance.Text);
             SqlDataReader drverif = cmdverif.ExecuteReader();
             drverif.Read();
             if (!drverif.HasRows)
