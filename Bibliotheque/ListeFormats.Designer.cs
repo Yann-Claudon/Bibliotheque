@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.btn_modifFormat = new System.Windows.Forms.Button();
-            this.dgridview_editeur = new System.Windows.Forms.DataGridView();
-            this.txtbox_searchEditeur = new System.Windows.Forms.TextBox();
+            this.dgridview_format = new System.Windows.Forms.DataGridView();
+            this.txtbox_searchFormat = new System.Windows.Forms.TextBox();
             this.btn_supprEditeur = new System.Windows.Forms.Button();
             this.btn_ajoutFormat = new System.Windows.Forms.Button();
             this.btn_accueilFormat = new System.Windows.Forms.Button();
             this.lbl_soustitre_format = new System.Windows.Forms.Label();
             this.lbl_titre_format = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgridview_editeur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridview_format)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_modifFormat
@@ -47,22 +47,24 @@
             this.btn_modifFormat.TabIndex = 23;
             this.btn_modifFormat.Text = "Modification format";
             this.btn_modifFormat.UseVisualStyleBackColor = true;
+            this.btn_modifFormat.Click += new System.EventHandler(this.btn_modifFormat_Click);
             // 
-            // dgridview_editeur
+            // dgridview_format
             // 
-            this.dgridview_editeur.AllowUserToAddRows = false;
-            this.dgridview_editeur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridview_editeur.Location = new System.Drawing.Point(37, 213);
-            this.dgridview_editeur.Name = "dgridview_editeur";
-            this.dgridview_editeur.Size = new System.Drawing.Size(744, 218);
-            this.dgridview_editeur.TabIndex = 22;
+            this.dgridview_format.AllowUserToAddRows = false;
+            this.dgridview_format.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgridview_format.Location = new System.Drawing.Point(37, 213);
+            this.dgridview_format.Name = "dgridview_format";
+            this.dgridview_format.Size = new System.Drawing.Size(744, 218);
+            this.dgridview_format.TabIndex = 22;
             // 
-            // txtbox_searchEditeur
+            // txtbox_searchFormat
             // 
-            this.txtbox_searchEditeur.Location = new System.Drawing.Point(37, 166);
-            this.txtbox_searchEditeur.Name = "txtbox_searchEditeur";
-            this.txtbox_searchEditeur.Size = new System.Drawing.Size(100, 20);
-            this.txtbox_searchEditeur.TabIndex = 21;
+            this.txtbox_searchFormat.Location = new System.Drawing.Point(37, 166);
+            this.txtbox_searchFormat.Name = "txtbox_searchFormat";
+            this.txtbox_searchFormat.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_searchFormat.TabIndex = 21;
+            this.txtbox_searchFormat.TextChanged += new System.EventHandler(this.txtbox_searchFormat_TextChanged);
             // 
             // btn_supprEditeur
             // 
@@ -72,6 +74,7 @@
             this.btn_supprEditeur.TabIndex = 20;
             this.btn_supprEditeur.Text = "Suppression editeur";
             this.btn_supprEditeur.UseVisualStyleBackColor = true;
+            this.btn_supprEditeur.Click += new System.EventHandler(this.btn_supprEditeur_Click);
             // 
             // btn_ajoutFormat
             // 
@@ -81,6 +84,7 @@
             this.btn_ajoutFormat.TabIndex = 19;
             this.btn_ajoutFormat.Text = "Ajout format";
             this.btn_ajoutFormat.UseVisualStyleBackColor = true;
+            this.btn_ajoutFormat.Click += new System.EventHandler(this.btn_ajoutFormat_Click);
             // 
             // btn_accueilFormat
             // 
@@ -90,6 +94,7 @@
             this.btn_accueilFormat.TabIndex = 18;
             this.btn_accueilFormat.Text = "Retour à l\'accueil";
             this.btn_accueilFormat.UseVisualStyleBackColor = true;
+            this.btn_accueilFormat.Click += new System.EventHandler(this.btn_accueilFormat_Click);
             // 
             // lbl_soustitre_format
             // 
@@ -116,8 +121,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_modifFormat);
-            this.Controls.Add(this.dgridview_editeur);
-            this.Controls.Add(this.txtbox_searchEditeur);
+            this.Controls.Add(this.dgridview_format);
+            this.Controls.Add(this.txtbox_searchFormat);
             this.Controls.Add(this.btn_supprEditeur);
             this.Controls.Add(this.btn_ajoutFormat);
             this.Controls.Add(this.btn_accueilFormat);
@@ -125,7 +130,8 @@
             this.Controls.Add(this.lbl_titre_format);
             this.Name = "ListeFormats";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dgridview_editeur)).EndInit();
+            this.Load += new System.EventHandler(this.ListeFormats_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgridview_format)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,8 +140,8 @@
         #endregion
 
         private System.Windows.Forms.Button btn_modifFormat;
-        private System.Windows.Forms.DataGridView dgridview_editeur;
-        private System.Windows.Forms.TextBox txtbox_searchEditeur;
+        private System.Windows.Forms.DataGridView dgridview_format;
+        private System.Windows.Forms.TextBox txtbox_searchFormat;
         private System.Windows.Forms.Button btn_supprEditeur;
         private System.Windows.Forms.Button btn_ajoutFormat;
         private System.Windows.Forms.Button btn_accueilFormat;

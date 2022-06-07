@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.lbl_Titre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_accueil = new System.Windows.Forms.Button();
+            this.btn_accueilAuteur = new System.Windows.Forms.Button();
             this.btn_ajoutAuteur = new System.Windows.Forms.Button();
             this.btn_supprAuteur = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_searchAuteur = new System.Windows.Forms.TextBox();
             this.dgridview_auteur = new System.Windows.Forms.DataGridView();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
@@ -64,15 +64,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Liste auteurs";
             // 
-            // btn_accueil
+            // btn_accueilAuteur
             // 
-            this.btn_accueil.Location = new System.Drawing.Point(12, 12);
-            this.btn_accueil.Name = "btn_accueil";
-            this.btn_accueil.Size = new System.Drawing.Size(103, 23);
-            this.btn_accueil.TabIndex = 1;
-            this.btn_accueil.Text = "Retour à l\'accueil";
-            this.btn_accueil.UseVisualStyleBackColor = true;
-            this.btn_accueil.Click += new System.EventHandler(this.btn_accueil_Click);
+            this.btn_accueilAuteur.Location = new System.Drawing.Point(12, 12);
+            this.btn_accueilAuteur.Name = "btn_accueilAuteur";
+            this.btn_accueilAuteur.Size = new System.Drawing.Size(103, 23);
+            this.btn_accueilAuteur.TabIndex = 1;
+            this.btn_accueilAuteur.Text = "Retour à l\'accueil";
+            this.btn_accueilAuteur.UseVisualStyleBackColor = true;
+            this.btn_accueilAuteur.Click += new System.EventHandler(this.btn_accueilAuteur_Click);
             // 
             // btn_ajoutAuteur
             // 
@@ -94,12 +94,13 @@
             this.btn_supprAuteur.UseVisualStyleBackColor = true;
             this.btn_supprAuteur.Click += new System.EventHandler(this.btn_supprAuteur_Click);
             // 
-            // textBox1
+            // txtbox_searchAuteur
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtbox_searchAuteur.Location = new System.Drawing.Point(29, 156);
+            this.txtbox_searchAuteur.Name = "txtbox_searchAuteur";
+            this.txtbox_searchAuteur.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_searchAuteur.TabIndex = 4;
+            this.txtbox_searchAuteur.TextChanged += new System.EventHandler(this.txtbox_searchAuteur_TextChanged);
             // 
             // dgridview_auteur
             // 
@@ -142,10 +143,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_modif);
             this.Controls.Add(this.dgridview_auteur);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbox_searchAuteur);
             this.Controls.Add(this.btn_supprAuteur);
             this.Controls.Add(this.btn_ajoutAuteur);
-            this.Controls.Add(this.btn_accueil);
+            this.Controls.Add(this.btn_accueilAuteur);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Titre);
             this.Name = "ListeAuteurs";
@@ -163,10 +164,10 @@
 
         private System.Windows.Forms.Label lbl_Titre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_accueil;
+        private System.Windows.Forms.Button btn_accueilAuteur;
         private System.Windows.Forms.Button btn_ajoutAuteur;
         private System.Windows.Forms.Button btn_supprAuteur;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_searchAuteur;
         private System.Windows.Forms.DataGridView dgridview_auteur;
         private bibliothequeDataSet bibliothequeDataSet;
         private System.Windows.Forms.BindingSource authorBindingSource;

@@ -40,5 +40,41 @@ namespace Bibliotheque
             listeLivres.Show();
             Hide();
         }
+
+        private void btn_formats_Click(object sender, EventArgs e)
+        {
+            ListeFormats listeFormats = new ListeFormats();
+            listeFormats.Show();
+            Hide();
+        }
+
+        private void btn_status_Click(object sender, EventArgs e)
+        {
+            /*ListeStatus listeStatus = new ListeStatus();
+            listeStatus.Show();
+            Close();
+            */
+        }
+
+        private void btn_genres_Click(object sender, EventArgs e)
+        {
+            /*ListeGenres listeGenres = new ListeGenres();
+            listeGenres.Show();
+            Close();
+            */
+        }
+
+        private void btn_emprunts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_editeurs_Click(object sender, EventArgs e)
+        {
+            ListeEditeurs listeEditeurs = new ListeEditeurs();
+            listeEditeurs.Show();
+            Hide();
+
+        }
     }
 }

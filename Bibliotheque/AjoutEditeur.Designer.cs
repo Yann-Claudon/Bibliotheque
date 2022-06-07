@@ -57,6 +57,7 @@
             this.btn_annulerEditeur.TabIndex = 5;
             this.btn_annulerEditeur.Text = "Annuler";
             this.btn_annulerEditeur.UseVisualStyleBackColor = true;
+            this.btn_annulerEditeur.Click += new System.EventHandler(this.btn_annulerEditeur_Click);
             // 
             // btn_ajouterEditeur
             // 
