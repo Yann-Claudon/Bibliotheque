@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="AjoutLivre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,17 +70,29 @@
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
+    <Compile Include="AjoutEditeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutEditeur.Designer.cs">
+      <DependentUpon>AjoutEditeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeEditeurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeEditeurs.Designer.cs">
+      <DependentUpon>ListeEditeurs.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListeLivres.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListeLivres.Designer.cs">
       <DependentUpon>ListeLivres.cs</DependentUpon>
     </Compile>
-    <Compile Include="Auteur.cs">
+    <Compile Include="ListeAuteurs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Auteur.Designer.cs">
-      <DependentUpon>Auteur.cs</DependentUpon>
+    <Compile Include="ListeAuteurs.Designer.cs">
+      <DependentUpon>ListeAuteurs.cs</DependentUpon>
     </Compile>
     <Compile Include="AjoutAuteur.cs">
       <SubType>Form</SubType>
@@ -92,8 +105,14 @@
     <EmbeddedResource Include="AjoutLivre.resx">
       <DependentUpon>AjoutLivre.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Auteur.resx">
-      <DependentUpon>Auteur.cs</DependentUpon>
+    <EmbeddedResource Include="AjoutEditeur.resx">
+      <DependentUpon>AjoutEditeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeEditeurs.resx">
+      <DependentUpon>ListeEditeurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeAuteurs.resx">
+      <DependentUpon>ListeAuteurs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>

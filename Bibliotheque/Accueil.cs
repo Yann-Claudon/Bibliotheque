@@ -22,12 +22,15 @@ namespace Bibliotheque{
 
         }
 
+
         /*Ouverture de la liste auteur
          *
          */
-        private void btn_auteurs_Click(object sender, EventArgs e){
-            Auteur auteur = new Auteur();
+        private void btn_auteurs_Click(object sender, EventArgs e)
+        {
+            ListeAuteurs auteur = new ListeAuteurs();
             auteur.Show();
+            Hide();
         }
 
         /*Ouverture de la liste livre
