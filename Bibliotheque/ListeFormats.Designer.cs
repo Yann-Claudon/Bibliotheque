@@ -52,6 +52,7 @@
             // dgridview_format
             // 
             this.dgridview_format.AllowUserToAddRows = false;
+            this.dgridview_format.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridview_format.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgridview_format.Location = new System.Drawing.Point(37, 213);
             this.dgridview_format.Name = "dgridview_format";
@@ -64,6 +65,7 @@
             this.txtbox_searchFormat.Name = "txtbox_searchFormat";
             this.txtbox_searchFormat.Size = new System.Drawing.Size(100, 20);
             this.txtbox_searchFormat.TabIndex = 21;
+            this.txtbox_searchFormat.Text = "Recherche format";
             this.txtbox_searchFormat.TextChanged += new System.EventHandler(this.txtbox_searchFormat_TextChanged);
             // 
             // btn_supprEditeur
@@ -129,7 +131,7 @@
             this.Controls.Add(this.lbl_soustitre_format);
             this.Controls.Add(this.lbl_titre_format);
             this.Name = "ListeFormats";
-            this.Text = "Form1";
+            this.Text = "Bibliothèque - Liste format";
             this.Load += new System.EventHandler(this.ListeFormats_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_format)).EndInit();
             this.ResumeLayout(false);

@@ -76,7 +76,7 @@
             // 
             // btn_ajoutAuteur
             // 
-            this.btn_ajoutAuteur.Location = new System.Drawing.Point(196, 156);
+            this.btn_ajoutAuteur.Location = new System.Drawing.Point(211, 156);
             this.btn_ajoutAuteur.Name = "btn_ajoutAuteur";
             this.btn_ajoutAuteur.Size = new System.Drawing.Size(75, 23);
             this.btn_ajoutAuteur.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             // btn_supprAuteur
             // 
-            this.btn_supprAuteur.Location = new System.Drawing.Point(489, 156);
+            this.btn_supprAuteur.Location = new System.Drawing.Point(504, 156);
             this.btn_supprAuteur.Name = "btn_supprAuteur";
             this.btn_supprAuteur.Size = new System.Drawing.Size(118, 23);
             this.btn_supprAuteur.TabIndex = 3;
@@ -96,10 +96,11 @@
             // 
             // txtbox_searchAuteur
             // 
-            this.txtbox_searchAuteur.Location = new System.Drawing.Point(29, 156);
+            this.txtbox_searchAuteur.Location = new System.Drawing.Point(44, 156);
             this.txtbox_searchAuteur.Name = "txtbox_searchAuteur";
             this.txtbox_searchAuteur.Size = new System.Drawing.Size(100, 20);
             this.txtbox_searchAuteur.TabIndex = 4;
+            this.txtbox_searchAuteur.Text = "Recherche auteur";
             this.txtbox_searchAuteur.TextChanged += new System.EventHandler(this.txtbox_searchAuteur_TextChanged);
             // 
             // dgridview_auteur
@@ -128,7 +129,7 @@
             // 
             // btn_modif
             // 
-            this.btn_modif.Location = new System.Drawing.Point(324, 156);
+            this.btn_modif.Location = new System.Drawing.Point(339, 156);
             this.btn_modif.Name = "btn_modif";
             this.btn_modif.Size = new System.Drawing.Size(115, 23);
             this.btn_modif.TabIndex = 7;

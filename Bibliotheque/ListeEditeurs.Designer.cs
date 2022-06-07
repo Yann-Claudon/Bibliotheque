@@ -58,6 +58,7 @@
             // dgridview_editeur
             // 
             this.dgridview_editeur.AllowUserToAddRows = false;
+            this.dgridview_editeur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridview_editeur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgridview_editeur.Location = new System.Drawing.Point(37, 213);
             this.dgridview_editeur.Name = "dgridview_editeur";
@@ -80,6 +81,7 @@
             this.txtbox_searchEditeur.Name = "txtbox_searchEditeur";
             this.txtbox_searchEditeur.Size = new System.Drawing.Size(100, 20);
             this.txtbox_searchEditeur.TabIndex = 13;
+            this.txtbox_searchEditeur.Text = "Recherche éditeur";
             this.txtbox_searchEditeur.TextChanged += new System.EventHandler(this.txtbox_searchEditeur_TextChanged);
             // 
             // btn_supprEditeur
@@ -149,7 +151,7 @@
             this.Controls.Add(this.lbl_soustitre_editeur);
             this.Controls.Add(this.lbl_titre_editeur);
             this.Name = "ListeEditeurs";
-            this.Text = "Form1";
+            this.Text = "Bibliothèque - Liste éditeurs";
             this.Load += new System.EventHandler(this.ListeEditeurs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_editeur)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorBindingSource)).EndInit();

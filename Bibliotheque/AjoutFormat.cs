@@ -25,7 +25,7 @@ namespace Bibliotheque
             SqlCommand cmd = new SqlCommand("insert into format (name_format) values (@Nom)", con);
             cmd.Parameters.AddWithValue("@Nom", txtbox_nom.Text);
 
-            SqlCommand cmdverif = new SqlCommand("SELECT name_format FROM format WHERE name_format LIKE @Nom", con);
+            SqlCommand cmdverif = new SqlCommand("SELECT name_format FROM format WHERE name_format LIKE '"+ txtbox_nom.Text + "'", con);
             SqlDataReader drverif = cmdverif.ExecuteReader();
             drverif.Read();
             if (!drverif.HasRows)
