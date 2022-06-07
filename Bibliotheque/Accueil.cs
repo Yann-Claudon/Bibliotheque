@@ -76,5 +76,12 @@ namespace Bibliotheque
             Hide();
 
         }
+
+        private void btn_clients_Click(object sender, EventArgs e)
+        {
+            ListeClients listeClients = new ListeClients();
+            listeClients.Show();
+            Hide();
+        }
     }
 }

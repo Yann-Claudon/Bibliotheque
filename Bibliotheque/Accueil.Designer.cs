@@ -103,6 +103,7 @@
             this.btn_clients.TabIndex = 5;
             this.btn_clients.Text = "Liste des clients";
             this.btn_clients.UseVisualStyleBackColor = true;
+            this.btn_clients.Click += new System.EventHandler(this.btn_clients_Click);
             // 
             // btn_retourLivres
             // 
