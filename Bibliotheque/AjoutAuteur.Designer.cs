@@ -59,7 +59,6 @@
             this.btn_annulerAuteur.TabIndex = 5;
             this.btn_annulerAuteur.Text = "Annuler";
             this.btn_annulerAuteur.UseVisualStyleBackColor = true;
-            this.btn_annulerAuteur.Click += new System.EventHandler(this.btn_annulerAuteur_Click);
             // 
             // txtbox_naissance
             // 
@@ -89,7 +88,6 @@
             this.txtbox_nom.Size = new System.Drawing.Size(100, 25);
             this.txtbox_nom.TabIndex = 0;
             this.txtbox_nom.Text = "Prénom Nom";
-            this.txtbox_nom.TextChanged += new System.EventHandler(this.txtbox_nom_TextChanged);
             // 
             // AjoutAuteur
             // 
