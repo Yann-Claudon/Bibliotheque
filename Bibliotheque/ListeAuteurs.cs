@@ -22,9 +22,16 @@ namespace Bibliotheque
 
         private void Auteur_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'bibliothequeDataSet.author'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.authorTableAdapter.Fill(this.bibliothequeDataSet.author);
+            
+            var select = "SELECT id_author as 'ID', name_author as 'Prenom Nom', birthday_author as 'Date de naissance' FROM author";
+            var c = new SqlConnection(connstring); // Your Connection String here
+            var dataAdapter = new SqlDataAdapter(select, c);
 
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dgridview_auteur.DataSource = ds.Tables[0];
+            
         }
 
         private void btn_ajoutAuteur_Click(object sender, EventArgs e)
@@ -38,7 +45,6 @@ namespace Bibliotheque
 
         private void btn_supprAuteur_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(this.dgridview_auteur.CurrentCell.ColumnIndex.ToString());
 
             if (this.dgridview_auteur.SelectedRows.Count > 0)
             {
@@ -56,27 +62,13 @@ namespace Bibliotheque
             }
         }
 
-        private void btn_accueil_Click(object sender, EventArgs e)
+        private void btn_accueilAuteur_Click(object sender, EventArgs e)
         {
             Accueil accueil = new Accueil();
             accueil.Show();
             Close();
         }
 
-        /*private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SqlConnection con = new SqlConnection("connstring");
-            con.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM author", con);
-            SqlDataReader sqlReader = cmd.ExecuteReader();
-
-            while (sqlReader.Read())
-            {
-                this.comboBox1.Items.Add(sqlReader["name_author"].ToString());
-            }
-
-            sqlReader.Close();
-        }*/
 
         private void btn_modif_Click(object sender, EventArgs e)
         {
@@ -91,6 +83,18 @@ namespace Bibliotheque
             con.Close();
 
             MessageBox.Show("Modification réussie");
+        }
+
+        private void txtbox_searchAuteur_TextChanged(object sender, EventArgs e)
+        {
+            var select = "SELECT id_author AS 'ID', name_author AS 'Prenom Nom' FROM author WHERE name_author LIKE '%' + @Nom + '%'; ";
+            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
+            var dataAdapter = new SqlDataAdapter(select, c);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@Nom", txtbox_searchAuteur.Text);
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dgridview_auteur.DataSource = ds.Tables[0];
         }
     }
 }
