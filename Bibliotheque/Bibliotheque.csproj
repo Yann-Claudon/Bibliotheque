@@ -125,7 +125,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListeClients.resx">
       <DependentUpon>ListeClients.cs</DependentUpon>
-    </EmbeddedResource>
+
     <EmbeddedResource Include="AjoutLivre.resx">
       <DependentUpon>AjoutLivre.cs</DependentUpon>
     </EmbeddedResource>
