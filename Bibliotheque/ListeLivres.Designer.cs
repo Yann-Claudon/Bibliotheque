@@ -28,11 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_Titre = new System.Windows.Forms.Label();
             this.lbl_SousTitre = new System.Windows.Forms.Label();
             this.btn_ajoutLivre = new System.Windows.Forms.Button();
             this.btn_supressionLivre = new System.Windows.Forms.Button();
             this.btn_accueil = new System.Windows.Forms.Button();
+            this.dgridview_livre = new System.Windows.Forms.DataGridView();
+            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliothequeBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bibliothequeBDD = new Bibliotheque.bibliothequeBDD();
+            this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.authorTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.authorTableAdapter();
+            this.bookTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
+            this.btn_modifier = new System.Windows.Forms.Button();
+            this.txtbox_recherche = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridview_livre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeBDDBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeBDD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Titre
@@ -64,15 +79,17 @@
             this.btn_ajoutLivre.TabIndex = 4;
             this.btn_ajoutLivre.Text = "Ajout livre";
             this.btn_ajoutLivre.UseVisualStyleBackColor = true;
+            this.btn_ajoutLivre.Click += new System.EventHandler(this.btn_ajoutLivre_Click);
             // 
             // btn_supressionLivre
             // 
-            this.btn_supressionLivre.Location = new System.Drawing.Point(458, 119);
+            this.btn_supressionLivre.Location = new System.Drawing.Point(468, 119);
             this.btn_supressionLivre.Name = "btn_supressionLivre";
             this.btn_supressionLivre.Size = new System.Drawing.Size(119, 23);
             this.btn_supressionLivre.TabIndex = 5;
             this.btn_supressionLivre.Text = "Suppression Livre";
             this.btn_supressionLivre.UseVisualStyleBackColor = true;
+            this.btn_supressionLivre.Click += new System.EventHandler(this.btn_supressionLivre_Click);
             // 
             // btn_accueil
             // 
@@ -84,11 +101,73 @@
             this.btn_accueil.UseVisualStyleBackColor = true;
             this.btn_accueil.Click += new System.EventHandler(this.btn_accueil_Click);
             // 
+            // dgridview_livre
+            // 
+            this.dgridview_livre.AllowUserToAddRows = false;
+            this.dgridview_livre.AllowUserToDeleteRows = false;
+            this.dgridview_livre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgridview_livre.Location = new System.Drawing.Point(26, 175);
+            this.dgridview_livre.Name = "dgridview_livre";
+            this.dgridview_livre.ReadOnly = true;
+            this.dgridview_livre.Size = new System.Drawing.Size(745, 228);
+            this.dgridview_livre.TabIndex = 7;
+            // 
+            // bookBindingSource
+            // 
+            this.bookBindingSource.DataMember = "book";
+            this.bookBindingSource.DataSource = this.bibliothequeBDDBindingSource;
+            // 
+            // bibliothequeBDDBindingSource
+            // 
+            this.bibliothequeBDDBindingSource.DataSource = this.bibliothequeBDD;
+            this.bibliothequeBDDBindingSource.Position = 0;
+            // 
+            // bibliothequeBDD
+            // 
+            this.bibliothequeBDD.DataSetName = "bibliothequeBDD";
+            this.bibliothequeBDD.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // authorBindingSource
+            // 
+            this.authorBindingSource.DataMember = "author";
+            this.authorBindingSource.DataSource = this.bibliothequeBDDBindingSource;
+            // 
+            // authorTableAdapter
+            // 
+            this.authorTableAdapter.ClearBeforeFill = true;
+            // 
+            // bookTableAdapter
+            // 
+            this.bookTableAdapter.ClearBeforeFill = true;
+            // 
+            // btn_modifier
+            // 
+            this.btn_modifier.Location = new System.Drawing.Point(333, 119);
+            this.btn_modifier.Name = "btn_modifier";
+            this.btn_modifier.Size = new System.Drawing.Size(119, 23);
+            this.btn_modifier.TabIndex = 8;
+            this.btn_modifier.Text = "Modifier livre";
+            this.btn_modifier.UseVisualStyleBackColor = true;
+            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
+            // 
+            // txtbox_recherche
+            // 
+            this.txtbox_recherche.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbox_recherche.Location = new System.Drawing.Point(51, 119);
+            this.txtbox_recherche.Name = "txtbox_recherche";
+            this.txtbox_recherche.Size = new System.Drawing.Size(120, 25);
+            this.txtbox_recherche.TabIndex = 9;
+            this.txtbox_recherche.Text = "Recherche livre";
+            this.txtbox_recherche.TextChanged += new System.EventHandler(this.txtbox_recherche_TextChanged);
+            // 
             // ListeLivres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtbox_recherche);
+            this.Controls.Add(this.btn_modifier);
+            this.Controls.Add(this.dgridview_livre);
             this.Controls.Add(this.btn_accueil);
             this.Controls.Add(this.btn_supressionLivre);
             this.Controls.Add(this.btn_ajoutLivre);
@@ -97,6 +176,11 @@
             this.Name = "ListeLivres";
             this.Text = "Bibliothèque - ListeLivres";
             this.Load += new System.EventHandler(this.ListeLivres_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgridview_livre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeBDDBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeBDD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,5 +193,14 @@
         private System.Windows.Forms.Button btn_ajoutLivre;
         private System.Windows.Forms.Button btn_supressionLivre;
         private System.Windows.Forms.Button btn_accueil;
+        private System.Windows.Forms.DataGridView dgridview_livre;
+        private System.Windows.Forms.BindingSource bibliothequeBDDBindingSource;
+        private bibliothequeBDD bibliothequeBDD;
+        private System.Windows.Forms.BindingSource authorBindingSource;
+        private bibliothequeBDDTableAdapters.authorTableAdapter authorTableAdapter;
+        private System.Windows.Forms.BindingSource bookBindingSource;
+        private bibliothequeBDDTableAdapters.bookTableAdapter bookTableAdapter;
+        private System.Windows.Forms.Button btn_modifier;
+        private System.Windows.Forms.TextBox txtbox_recherche;
     }
 }
