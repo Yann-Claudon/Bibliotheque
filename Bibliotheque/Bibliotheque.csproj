@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
+    <Compile Include="AjoutLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutLivre.Designer.cs">
+      <DependentUpon>AjoutLivre.cs</DependentUpon>
+    </Compile>
     <Compile Include="bibliothequeBDD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +102,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjoutLivre.resx">
+      <DependentUpon>AjoutLivre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AjoutEditeur.resx">
       <DependentUpon>AjoutEditeur.cs</DependentUpon>
     </EmbeddedResource>
