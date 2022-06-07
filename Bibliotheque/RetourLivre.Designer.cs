@@ -1,6 +1,6 @@
 ﻿namespace Bibliotheque
 {
-    partial class PretLivre
+    partial class RetourLivre
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gBox_Pretlivre = new System.Windows.Forms.GroupBox();
+            this.gBox_RetourLivre = new System.Windows.Forms.GroupBox();
             this.cmbbox_livre = new System.Windows.Forms.ComboBox();
             this.date_retour = new System.Windows.Forms.DateTimePicker();
             this.date_pret = new System.Windows.Forms.DateTimePicker();
             this.cmbbox_nomClient = new System.Windows.Forms.ComboBox();
             this.btn_annulerAuteur = new System.Windows.Forms.Button();
             this.btn_ajouterAuteur = new System.Windows.Forms.Button();
-            this.gBox_Pretlivre.SuspendLayout();
+            this.cmbboxetat = new System.Windows.Forms.ComboBox();
+            this.gBox_RetourLivre.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gBox_Pretlivre
+            // gBox_RetourLivre
             // 
-            this.gBox_Pretlivre.Controls.Add(this.cmbbox_livre);
-            this.gBox_Pretlivre.Controls.Add(this.date_retour);
-            this.gBox_Pretlivre.Controls.Add(this.date_pret);
-            this.gBox_Pretlivre.Controls.Add(this.cmbbox_nomClient);
-            this.gBox_Pretlivre.Controls.Add(this.btn_annulerAuteur);
-            this.gBox_Pretlivre.Controls.Add(this.btn_ajouterAuteur);
-            this.gBox_Pretlivre.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBox_Pretlivre.Location = new System.Drawing.Point(12, 12);
-            this.gBox_Pretlivre.Name = "gBox_Pretlivre";
-            this.gBox_Pretlivre.Size = new System.Drawing.Size(381, 330);
-            this.gBox_Pretlivre.TabIndex = 2;
-            this.gBox_Pretlivre.TabStop = false;
-            this.gBox_Pretlivre.Text = "Prêt Livre";
+            this.gBox_RetourLivre.Controls.Add(this.cmbboxetat);
+            this.gBox_RetourLivre.Controls.Add(this.cmbbox_livre);
+            this.gBox_RetourLivre.Controls.Add(this.date_retour);
+            this.gBox_RetourLivre.Controls.Add(this.date_pret);
+            this.gBox_RetourLivre.Controls.Add(this.cmbbox_nomClient);
+            this.gBox_RetourLivre.Controls.Add(this.btn_annulerAuteur);
+            this.gBox_RetourLivre.Controls.Add(this.btn_ajouterAuteur);
+            this.gBox_RetourLivre.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBox_RetourLivre.Location = new System.Drawing.Point(12, 12);
+            this.gBox_RetourLivre.Name = "gBox_RetourLivre";
+            this.gBox_RetourLivre.Size = new System.Drawing.Size(381, 330);
+            this.gBox_RetourLivre.TabIndex = 3;
+            this.gBox_RetourLivre.TabStop = false;
+            this.gBox_RetourLivre.Text = "Retour Livre";
             // 
             // cmbbox_livre
             // 
@@ -67,7 +69,7 @@
             // 
             this.date_retour.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_retour.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_retour.Location = new System.Drawing.Point(7, 183);
+            this.date_retour.Location = new System.Drawing.Point(6, 228);
             this.date_retour.Name = "date_retour";
             this.date_retour.Size = new System.Drawing.Size(135, 25);
             this.date_retour.TabIndex = 8;
@@ -76,7 +78,7 @@
             // 
             this.date_pret.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date_pret.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.date_pret.Location = new System.Drawing.Point(6, 137);
+            this.date_pret.Location = new System.Drawing.Point(6, 185);
             this.date_pret.Name = "date_pret";
             this.date_pret.Size = new System.Drawing.Size(136, 25);
             this.date_pret.TabIndex = 7;
@@ -112,28 +114,37 @@
             this.btn_ajouterAuteur.UseVisualStyleBackColor = true;
             this.btn_ajouterAuteur.Click += new System.EventHandler(this.btn_ajouterAuteur_Click);
             // 
-            // PretLivre
+            // cmbboxetat
+            // 
+            this.cmbboxetat.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbboxetat.FormattingEnabled = true;
+            this.cmbboxetat.Location = new System.Drawing.Point(6, 138);
+            this.cmbboxetat.Name = "cmbboxetat";
+            this.cmbboxetat.Size = new System.Drawing.Size(135, 25);
+            this.cmbboxetat.TabIndex = 10;
+            // 
+            // RetourLivre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 360);
-            this.Controls.Add(this.gBox_Pretlivre);
-            this.Name = "PretLivre";
-            this.Text = "Bibliothèque - PretLivre";
-            this.Load += new System.EventHandler(this.PretLivre_Load);
-            this.gBox_Pretlivre.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(417, 373);
+            this.Controls.Add(this.gBox_RetourLivre);
+            this.Name = "RetourLivre";
+            this.Text = "Bibliotheque - RetourLivre";
+            this.gBox_RetourLivre.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gBox_Pretlivre;
+        private System.Windows.Forms.GroupBox gBox_RetourLivre;
+        private System.Windows.Forms.ComboBox cmbbox_livre;
+        private System.Windows.Forms.DateTimePicker date_retour;
+        private System.Windows.Forms.DateTimePicker date_pret;
+        private System.Windows.Forms.ComboBox cmbbox_nomClient;
         private System.Windows.Forms.Button btn_annulerAuteur;
         private System.Windows.Forms.Button btn_ajouterAuteur;
-        private System.Windows.Forms.ComboBox cmbbox_nomClient;
-        private System.Windows.Forms.DateTimePicker date_pret;
-        private System.Windows.Forms.DateTimePicker date_retour;
-        private System.Windows.Forms.ComboBox cmbbox_livre;
+        private System.Windows.Forms.ComboBox cmbboxetat;
     }
 }

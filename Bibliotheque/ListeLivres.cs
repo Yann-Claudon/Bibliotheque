@@ -68,11 +68,9 @@ namespace Bibliotheque{
             }
         }
 
-        /// <summary>
-        /// Modification d'un livre selectionné
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /*
+         * Modifie le livre sélectionné dans le DataGridView lors du clic sur le bouton "modifier"
+         */
         private void btn_modifier_Click(object sender, EventArgs e){ 
             
             if (this.dgridview_livre.SelectedRows.Count > 0){
