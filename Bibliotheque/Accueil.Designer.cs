@@ -98,7 +98,6 @@
             this.btn_clients.TabIndex = 5;
             this.btn_clients.Text = "Liste des clients";
             this.btn_clients.UseVisualStyleBackColor = true;
-            this.btn_clients.Click += new System.EventHandler(this.btn_clients_Click);
             // 
             // btn_retourLivres
             // 
@@ -149,7 +148,7 @@
             this.Controls.Add(this.lbl_SousTitre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_Titre);
-            this.Name = "Accueil";
+            this.Name = "frmaccueil";
             this.Text = "Bibliothèque - Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);
             this.ResumeLayout(false);
