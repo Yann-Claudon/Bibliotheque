@@ -31,14 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.lbl_Titre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_accueil = new System.Windows.Forms.Button();
+            this.btn_accueilAuteur = new System.Windows.Forms.Button();
             this.btn_ajoutAuteur = new System.Windows.Forms.Button();
             this.btn_supprAuteur = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbox_searchAuteur = new System.Windows.Forms.TextBox();
             this.dgridview_auteur = new System.Windows.Forms.DataGridView();
-            this.idauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.birthdayauthorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
             this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
@@ -67,19 +64,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Liste auteurs";
             // 
-            // btn_accueil
+            // btn_accueilAuteur
             // 
-            this.btn_accueil.Location = new System.Drawing.Point(12, 12);
-            this.btn_accueil.Name = "btn_accueil";
-            this.btn_accueil.Size = new System.Drawing.Size(103, 23);
-            this.btn_accueil.TabIndex = 1;
-            this.btn_accueil.Text = "Retour à l\'accueil";
-            this.btn_accueil.UseVisualStyleBackColor = true;
-            this.btn_accueil.Click += new System.EventHandler(this.btn_accueil_Click);
+            this.btn_accueilAuteur.Location = new System.Drawing.Point(12, 12);
+            this.btn_accueilAuteur.Name = "btn_accueilAuteur";
+            this.btn_accueilAuteur.Size = new System.Drawing.Size(103, 23);
+            this.btn_accueilAuteur.TabIndex = 1;
+            this.btn_accueilAuteur.Text = "Retour à l\'accueil";
+            this.btn_accueilAuteur.UseVisualStyleBackColor = true;
+            this.btn_accueilAuteur.Click += new System.EventHandler(this.btn_accueilAuteur_Click);
             // 
             // btn_ajoutAuteur
             // 
-            this.btn_ajoutAuteur.Location = new System.Drawing.Point(196, 156);
+            this.btn_ajoutAuteur.Location = new System.Drawing.Point(211, 156);
             this.btn_ajoutAuteur.Name = "btn_ajoutAuteur";
             this.btn_ajoutAuteur.Size = new System.Drawing.Size(75, 23);
             this.btn_ajoutAuteur.TabIndex = 2;
@@ -89,7 +86,7 @@
             // 
             // btn_supprAuteur
             // 
-            this.btn_supprAuteur.Location = new System.Drawing.Point(489, 156);
+            this.btn_supprAuteur.Location = new System.Drawing.Point(504, 156);
             this.btn_supprAuteur.Name = "btn_supprAuteur";
             this.btn_supprAuteur.Size = new System.Drawing.Size(118, 23);
             this.btn_supprAuteur.TabIndex = 3;
@@ -97,48 +94,24 @@
             this.btn_supprAuteur.UseVisualStyleBackColor = true;
             this.btn_supprAuteur.Click += new System.EventHandler(this.btn_supprAuteur_Click);
             // 
-            // textBox1
+            // txtbox_searchAuteur
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtbox_searchAuteur.Location = new System.Drawing.Point(44, 156);
+            this.txtbox_searchAuteur.Name = "txtbox_searchAuteur";
+            this.txtbox_searchAuteur.Size = new System.Drawing.Size(100, 20);
+            this.txtbox_searchAuteur.TabIndex = 4;
+            this.txtbox_searchAuteur.Text = "Recherche auteur";
+            this.txtbox_searchAuteur.TextChanged += new System.EventHandler(this.txtbox_searchAuteur_TextChanged);
             // 
             // dgridview_auteur
             // 
             this.dgridview_auteur.AllowUserToAddRows = false;
-            this.dgridview_auteur.AutoGenerateColumns = false;
+            this.dgridview_auteur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgridview_auteur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridview_auteur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idauthorDataGridViewTextBoxColumn,
-            this.nameauthorDataGridViewTextBoxColumn,
-            this.birthdayauthorDataGridViewTextBoxColumn});
-            this.dgridview_auteur.DataSource = this.authorBindingSource;
             this.dgridview_auteur.Location = new System.Drawing.Point(44, 203);
             this.dgridview_auteur.Name = "dgridview_auteur";
             this.dgridview_auteur.Size = new System.Drawing.Size(744, 218);
             this.dgridview_auteur.TabIndex = 5;
-            // 
-            // idauthorDataGridViewTextBoxColumn
-            // 
-            this.idauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idauthorDataGridViewTextBoxColumn.DataPropertyName = "id_author";
-            this.idauthorDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idauthorDataGridViewTextBoxColumn.Name = "idauthorDataGridViewTextBoxColumn";
-            // 
-            // nameauthorDataGridViewTextBoxColumn
-            // 
-            this.nameauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameauthorDataGridViewTextBoxColumn.DataPropertyName = "name_author";
-            this.nameauthorDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nameauthorDataGridViewTextBoxColumn.Name = "nameauthorDataGridViewTextBoxColumn";
-            // 
-            // birthdayauthorDataGridViewTextBoxColumn
-            // 
-            this.birthdayauthorDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.birthdayauthorDataGridViewTextBoxColumn.DataPropertyName = "birthday_author";
-            this.birthdayauthorDataGridViewTextBoxColumn.HeaderText = "Naissance";
-            this.birthdayauthorDataGridViewTextBoxColumn.Name = "birthdayauthorDataGridViewTextBoxColumn";
             // 
             // authorBindingSource
             // 
@@ -156,7 +129,7 @@
             // 
             // btn_modif
             // 
-            this.btn_modif.Location = new System.Drawing.Point(324, 156);
+            this.btn_modif.Location = new System.Drawing.Point(339, 156);
             this.btn_modif.Name = "btn_modif";
             this.btn_modif.Size = new System.Drawing.Size(115, 23);
             this.btn_modif.TabIndex = 7;
@@ -171,10 +144,10 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_modif);
             this.Controls.Add(this.dgridview_auteur);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbox_searchAuteur);
             this.Controls.Add(this.btn_supprAuteur);
             this.Controls.Add(this.btn_ajoutAuteur);
-            this.Controls.Add(this.btn_accueil);
+            this.Controls.Add(this.btn_accueilAuteur);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Titre);
             this.Name = "ListeAuteurs";
@@ -192,17 +165,14 @@
 
         private System.Windows.Forms.Label lbl_Titre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_accueil;
+        private System.Windows.Forms.Button btn_accueilAuteur;
         private System.Windows.Forms.Button btn_ajoutAuteur;
         private System.Windows.Forms.Button btn_supprAuteur;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbox_searchAuteur;
         private System.Windows.Forms.DataGridView dgridview_auteur;
         private bibliothequeDataSet bibliothequeDataSet;
         private System.Windows.Forms.BindingSource authorBindingSource;
         private bibliothequeDataSetTableAdapters.authorTableAdapter authorTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idauthorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameauthorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn birthdayauthorDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btn_modif;
     }
 }

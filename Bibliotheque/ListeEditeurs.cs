@@ -20,8 +20,14 @@ namespace Bibliotheque
 
         private void ListeEditeurs_Load(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'bibliothequeBDD.editor'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.editorTableAdapter.Fill(this.bibliothequeBDD.editor);
+            var select = "SELECT id_editor as 'ID', name_editor as 'Nom Éditeur' FROM editor";
+            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
+            var dataAdapter = new SqlDataAdapter(select, c);
+
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dgridview_editeur.DataSource = ds.Tables[0];
 
         }
 
@@ -54,7 +60,7 @@ namespace Bibliotheque
 
                 SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM author WHERE name_author = @Nom", con);
+                SqlCommand cmd = new SqlCommand("DELETE FROM editor WHERE name_editor = @Nom", con);
                 cmd.Parameters.AddWithValue("@Nom", this.dgridview_editeur.CurrentRow.Cells[1].Value.ToString());
                 cmd.ExecuteNonQuery();
 
@@ -64,11 +70,26 @@ namespace Bibliotheque
             }
         }
 
-        private void btn_accueil_Click(object sender, EventArgs e)
+        private void btn_accueilEditeur_Click(object sender, EventArgs e)
         {
             Accueil accueil = new Accueil();
             accueil.Show();
             Close();
         }
+
+        private void txtbox_searchEditeur_TextChanged(object sender, EventArgs e)
+        {
+            var select = "SELECT id_editor AS 'ID', name_editor AS 'Nom Éditeur' FROM editor WHERE name_editor LIKE '%" + txtbox_searchEditeur.Text + "%';";
+            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
+            var dataAdapter = new SqlDataAdapter(select, c);
+            dataAdapter.SelectCommand.Parameters.AddWithValue("@Nom", txtbox_searchEditeur.Text);
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dgridview_editeur.DataSource = ds.Tables[0];
+        }
+
+        
+
     }
 }
