@@ -87,7 +87,6 @@
     </Compile>
     <Compile Include="ListeClients.Designer.cs">
       <DependentUpon>ListeClients.cs</DependentUpon>
-    </Compile>
     <Compile Include="AjoutEditeur.cs">
       <SubType>Form</SubType>
     </Compile>
