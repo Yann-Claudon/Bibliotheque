@@ -34,9 +34,6 @@
             this.btn_auteurs = new System.Windows.Forms.Button();
             this.btn_livres = new System.Windows.Forms.Button();
             this.btn_clients = new System.Windows.Forms.Button();
-            this.btn_retourLivres = new System.Windows.Forms.Button();
-            this.btn_pretLivres = new System.Windows.Forms.Button();
-            this.btn_planning = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btn_status = new System.Windows.Forms.Button();
             this.btn_formats = new System.Windows.Forms.Button();
@@ -105,37 +102,9 @@
             this.btn_clients.UseVisualStyleBackColor = true;
             this.btn_clients.Click += new System.EventHandler(this.btn_clients_Click);
             // 
-            // btn_retourLivres
-            // 
-            this.btn_retourLivres.Location = new System.Drawing.Point(68, 352);
-            this.btn_retourLivres.Name = "btn_retourLivres";
-            this.btn_retourLivres.Size = new System.Drawing.Size(119, 23);
-            this.btn_retourLivres.TabIndex = 6;
-            this.btn_retourLivres.Text = "Retour livre";
-            this.btn_retourLivres.UseVisualStyleBackColor = true;
-            this.btn_retourLivres.Click += new System.EventHandler(this.btn_retourLivres_Click);
-            // 
-            // btn_pretLivres
-            // 
-            this.btn_pretLivres.Location = new System.Drawing.Point(461, 352);
-            this.btn_pretLivres.Name = "btn_pretLivres";
-            this.btn_pretLivres.Size = new System.Drawing.Size(119, 23);
-            this.btn_pretLivres.TabIndex = 7;
-            this.btn_pretLivres.Text = "Prêt de livre";
-            this.btn_pretLivres.UseVisualStyleBackColor = true;
-            // 
-            // btn_planning
-            // 
-            this.btn_planning.Location = new System.Drawing.Point(612, 272);
-            this.btn_planning.Name = "btn_planning";
-            this.btn_planning.Size = new System.Drawing.Size(119, 23);
-            this.btn_planning.TabIndex = 8;
-            this.btn_planning.Text = "Planning";
-            this.btn_planning.UseVisualStyleBackColor = true;
-            // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(555, 98);
+            this.monthCalendar1.Location = new System.Drawing.Point(555, 149);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
@@ -201,9 +170,6 @@
             this.Controls.Add(this.btn_formats);
             this.Controls.Add(this.btn_editeurs);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.btn_planning);
-            this.Controls.Add(this.btn_pretLivres);
-            this.Controls.Add(this.btn_retourLivres);
             this.Controls.Add(this.btn_clients);
             this.Controls.Add(this.btn_livres);
             this.Controls.Add(this.btn_auteurs);
@@ -226,9 +192,6 @@
         private System.Windows.Forms.Button btn_auteurs;
         private System.Windows.Forms.Button btn_livres;
         private System.Windows.Forms.Button btn_clients;
-        private System.Windows.Forms.Button btn_retourLivres;
-        private System.Windows.Forms.Button btn_pretLivres;
-        private System.Windows.Forms.Button btn_planning;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button btn_status;
         private System.Windows.Forms.Button btn_formats;
