@@ -132,6 +132,7 @@
             this.btn_planning.TabIndex = 8;
             this.btn_planning.Text = "Planning";
             this.btn_planning.UseVisualStyleBackColor = true;
+            this.btn_planning.Click += new System.EventHandler(this.btn_planning_Click);
             // 
             // monthCalendar1
             // 

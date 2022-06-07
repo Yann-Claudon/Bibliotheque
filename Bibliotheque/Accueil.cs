@@ -22,10 +22,12 @@ namespace Bibliotheque
 
         }
 
+
         private void btn_retourLivres_Click(object sender, EventArgs e)
         {
 
         }
+
 
         private void btn_auteurs_Click(object sender, EventArgs e)
         {
@@ -40,6 +42,12 @@ namespace Bibliotheque
             listeLivres.Show();
             Hide();
         }
+
+
+        private void btn_planning_Click(object sender, EventArgs e)
+        {
+            Planning planning = new Planning();
+            planning.Show();
 
         private void btn_formats_Click(object sender, EventArgs e)
         {
@@ -81,6 +89,7 @@ namespace Bibliotheque
         {
             ListeClients listeClients = new ListeClients();
             listeClients.Show();
+
             Hide();
         }
     }
