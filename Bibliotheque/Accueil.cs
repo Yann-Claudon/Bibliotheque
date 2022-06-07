@@ -17,12 +17,7 @@ namespace Bibliotheque{
         private void Accueil_Load(object sender, EventArgs e){
 
         }
-
-        private void btn_retourLivres_Click(object sender, EventArgs e){
-
-        }
-
-
+        
         /*Ouverture de la liste auteur
          *
          */
@@ -39,6 +34,13 @@ namespace Bibliotheque{
         private void btn_livres_Click(object sender, EventArgs e){
             ListeLivres listeLivres = new ListeLivres();
             listeLivres.Show();
+            Hide();
+        }
+
+        private void btn_planning_Click(object sender, EventArgs e)
+        {
+            Planning planning = new Planning();
+            planning.Show();
             Hide();
         }
     }

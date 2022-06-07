@@ -126,6 +126,7 @@
             this.btn_planning.TabIndex = 8;
             this.btn_planning.Text = "Planning";
             this.btn_planning.UseVisualStyleBackColor = true;
+            this.btn_planning.Click += new System.EventHandler(this.btn_planning_Click);
             // 
             // monthCalendar1
             // 
@@ -148,7 +149,7 @@
             this.Controls.Add(this.lbl_SousTitre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbl_Titre);
-            this.Name = "frmaccueil";
+            this.Name = "Accueil";
             this.Text = "Bibliothèque - Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);
             this.ResumeLayout(false);
