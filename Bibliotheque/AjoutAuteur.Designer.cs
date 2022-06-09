@@ -98,7 +98,7 @@
             this.ClientSize = new System.Drawing.Size(243, 192);
             this.Controls.Add(this.gBox_AjoutAuteur);
             this.Name = "AjoutAuteur";
-            this.Text = "Bibliothèeque - Ajout auteur";
+            this.Text = "Bibliothèque - Ajout auteur";
             this.gBox_AjoutAuteur.ResumeLayout(false);
             this.gBox_AjoutAuteur.PerformLayout();
             this.ResumeLayout(false);
