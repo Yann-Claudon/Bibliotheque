@@ -31,7 +31,7 @@
             this.btn_modifFormat = new System.Windows.Forms.Button();
             this.dgridview_format = new System.Windows.Forms.DataGridView();
             this.txtbox_searchFormat = new System.Windows.Forms.TextBox();
-            this.btn_supprEditeur = new System.Windows.Forms.Button();
+            this.btn_supprFormat = new System.Windows.Forms.Button();
             this.btn_ajoutFormat = new System.Windows.Forms.Button();
             this.btn_accueilFormat = new System.Windows.Forms.Button();
             this.lbl_soustitre_format = new System.Windows.Forms.Label();
@@ -68,15 +68,15 @@
             this.txtbox_searchFormat.Text = "Recherche format";
             this.txtbox_searchFormat.TextChanged += new System.EventHandler(this.txtbox_searchFormat_TextChanged);
             // 
-            // btn_supprEditeur
+            // btn_supprFormat
             // 
-            this.btn_supprEditeur.Location = new System.Drawing.Point(497, 166);
-            this.btn_supprEditeur.Name = "btn_supprEditeur";
-            this.btn_supprEditeur.Size = new System.Drawing.Size(118, 23);
-            this.btn_supprEditeur.TabIndex = 20;
-            this.btn_supprEditeur.Text = "Suppression editeur";
-            this.btn_supprEditeur.UseVisualStyleBackColor = true;
-            this.btn_supprEditeur.Click += new System.EventHandler(this.btn_supprEditeur_Click);
+            this.btn_supprFormat.Location = new System.Drawing.Point(497, 166);
+            this.btn_supprFormat.Name = "btn_supprFormat";
+            this.btn_supprFormat.Size = new System.Drawing.Size(118, 23);
+            this.btn_supprFormat.TabIndex = 20;
+            this.btn_supprFormat.Text = "Suppression format";
+            this.btn_supprFormat.UseVisualStyleBackColor = true;
+            this.btn_supprFormat.Click += new System.EventHandler(this.btn_supprEditeur_Click);
             // 
             // btn_ajoutFormat
             // 
@@ -125,7 +125,7 @@
             this.Controls.Add(this.btn_modifFormat);
             this.Controls.Add(this.dgridview_format);
             this.Controls.Add(this.txtbox_searchFormat);
-            this.Controls.Add(this.btn_supprEditeur);
+            this.Controls.Add(this.btn_supprFormat);
             this.Controls.Add(this.btn_ajoutFormat);
             this.Controls.Add(this.btn_accueilFormat);
             this.Controls.Add(this.lbl_soustitre_format);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Button btn_modifFormat;
         private System.Windows.Forms.DataGridView dgridview_format;
         private System.Windows.Forms.TextBox txtbox_searchFormat;
-        private System.Windows.Forms.Button btn_supprEditeur;
+        private System.Windows.Forms.Button btn_supprFormat;
         private System.Windows.Forms.Button btn_ajoutFormat;
         private System.Windows.Forms.Button btn_accueilFormat;
         private System.Windows.Forms.Label lbl_soustitre_format;
