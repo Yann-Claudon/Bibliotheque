@@ -46,18 +46,17 @@ namespace Bibliotheque
 
         private void btn_status_Click(object sender, EventArgs e)
         {
-            /*ListeStatus listeStatus = new ListeStatus();
-            listeStatus.Show();
-            Close();
-            */
+            ListeStatuts listeStatuts = new ListeStatuts();
+            listeStatuts.Show();
+            Hide();
         }
 
         private void btn_genres_Click(object sender, EventArgs e)
         {
-            /*ListeGenres listeGenres = new ListeGenres();
+            ListeGenres listeGenres = new ListeGenres();
             listeGenres.Show();
-            Close();
-            */
+            Hide();
+            
         }
 
         private void btn_emprunts_Click(object sender, EventArgs e)
