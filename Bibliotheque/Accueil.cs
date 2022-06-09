@@ -46,10 +46,10 @@ namespace Bibliotheque
 
         private void btn_status_Click(object sender, EventArgs e)
         {
-            ListeStatuts listeStatuts = new ListeStatuts();
-            listeStatuts.Show();
+            /*ListeStatus listeStatus = new ListeStatus();
+            listeStatus.Show();
             Close();
-            
+            */
         }
 
         private void btn_genres_Click(object sender, EventArgs e)

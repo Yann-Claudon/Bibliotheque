@@ -86,7 +86,7 @@
             this.ClientSize = new System.Drawing.Size(242, 191);
             this.Controls.Add(this.gBox_ajoutEditeur);
             this.Name = "AjoutEditeur";
-            this.Text = "Bibliothèque - Ajout éditeur";
+            this.Text = "Form1";
             this.gBox_ajoutEditeur.ResumeLayout(false);
             this.gBox_ajoutEditeur.PerformLayout();
             this.ResumeLayout(false);
