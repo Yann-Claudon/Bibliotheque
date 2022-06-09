@@ -11,16 +11,10 @@ using System.Data.SqlClient;
 
 namespace Bibliotheque{
     public partial class ListeLivres : Form{
-        /*
-         * Initialise le Form ListeLivres
-         */
         public ListeLivres(){
             InitializeComponent();
         }
 
-        /*
-         * Charge les données des tables book, genre, author, format, editor, status pour pouvoir les afficher dans le DataGridView
-         */
         private void ListeLivres_Load(object sender, EventArgs e){
 
             var select = "SELECT id_book AS 'ID livre', name_book AS 'Nom du livre', publish_date_book AS 'Date de publication', name_genre AS 'Genre', name_editor AS 'Editeur', name_author AS 'Auteur', name_format AS 'Format', name_status AS 'Etat' FROM book INNER JOIN genre ON book.fk_genre_book = genre.id_genre INNER JOIN author ON book.fk_author_book = author.id_author INNER JOIN format ON book.fk_format_book = format.id_format INNER JOIN editor ON book.fk_editor_book = editor.id_editor INNER join status ON book.fk_status_book = status.id_status; ";
@@ -33,28 +27,23 @@ namespace Bibliotheque{
 
         }
 
-        /*
-         * Affiche le Form Accueil lors du clic sur le bouton "accueil"
-         */
         private void btn_accueil_Click(object sender, EventArgs e){
             Accueil accueil = new Accueil();
             accueil.Show();
             Close();
         }
 
-        /*
-         * Affiche le Form AjoutLivre lors du clic sur le bouton "ajout livre"
-         */
         private void btn_ajoutLivre_Click(object sender, EventArgs e){
             AjoutLivre ajoutLivre = new AjoutLivre();
             ajoutLivre.ShowDialog();
             Close();
         }
 
-
-        /*
-         * Supprime le livre sélectionné dans le DataGridView lors du clic sur le bouton "supprimer"
-         */
+        /// <summary>
+        /// Suppression d'un livre selectionné 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_supressionLivre_Click(object sender, EventArgs e){
             if (this.dgridview_livre.SelectedRows.Count > 0){          
                 SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True");
@@ -68,9 +57,11 @@ namespace Bibliotheque{
             }
         }
 
-        /*
-         * Modifie le livre sélectionné dans le DataGridView lors du clic sur le bouton "modifier"
-         */
+        /// <summary>
+        /// Modification d'un livre selectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_modifier_Click(object sender, EventArgs e){ 
             
             if (this.dgridview_livre.SelectedRows.Count > 0){
@@ -90,11 +81,12 @@ namespace Bibliotheque{
                 MessageBox.Show("Modification du livre effectué");
             }
         }
-
-
-        /*
-         * Recherche un livre en fonction de son nom entré dans le champ de recherche et l'affiche dans le DataGridView
-         */
+        
+        /// <summary>
+        /// Recherche d'un livre par son nom en fonction de ce qui est entré dans la textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtbox_recherche_TextChanged(object sender, EventArgs e){
             var select = "SELECT id_book AS 'ID livre', name_book AS 'Nom du livre', publish_date_book AS 'Date de publication', name_genre AS 'Genre', name_editor AS 'Editeur', name_author AS 'Auteur', name_format AS 'Format', name_status AS 'Etat' FROM book INNER JOIN genre ON book.fk_genre_book = genre.id_genre INNER JOIN author ON book.fk_author_book = author.id_author INNER JOIN format ON book.fk_format_book = format.id_format INNER JOIN editor ON book.fk_editor_book = editor.id_editor INNER join status ON book.fk_status_book = status.id_status WHERE name_book LIKE '%' + @Nom + '%'; ";
             var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here

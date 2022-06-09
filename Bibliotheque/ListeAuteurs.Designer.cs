@@ -37,8 +37,8 @@
             this.txtbox_searchAuteur = new System.Windows.Forms.TextBox();
             this.dgridview_auteur = new System.Windows.Forms.DataGridView();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliothequeDataSet = new global::Bibliotheque.bibliothequeDataSet();
-            this.authorTableAdapter = new global::Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
+            this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
+            this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
             this.btn_modif = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_auteur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();

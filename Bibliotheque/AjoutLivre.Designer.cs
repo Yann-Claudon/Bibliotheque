@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.gbox_livre = new System.Windows.Forms.GroupBox();
             this.cmbbox_genre = new System.Windows.Forms.ComboBox();
-            this.bibliothequeBDD = new global::Bibliotheque.bibliothequeBDD();
+            this.bibliothequeBDD = new Bibliotheque.bibliothequeBDD();
             this.cmbbox_auteur = new System.Windows.Forms.ComboBox();
             this.btn_annuler = new System.Windows.Forms.Button();
             this.btn_ajout = new System.Windows.Forms.Button();
@@ -41,7 +41,7 @@
             this.txtbox_datePublication = new System.Windows.Forms.TextBox();
             this.txtbox_nom = new System.Windows.Forms.TextBox();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bookTableAdapter = new global::Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
+            this.bookTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
             this.bibliothequeBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeBDDBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.gbox_livre.SuspendLayout();

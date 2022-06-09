@@ -30,11 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgridview_client = new System.Windows.Forms.DataGridView();
-            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliothequeDataSet1 = new Bibliotheque.bibliothequeDataSet1();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeDataSet = new Bibliotheque.bibliothequeDataSet();
-            this.txtbox_recherche_client = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_supprClient = new System.Windows.Forms.Button();
             this.btn_ajoutClient = new System.Windows.Forms.Button();
             this.btn_accueil_clients = new System.Windows.Forms.Button();
@@ -42,33 +40,39 @@
             this.lbl_Titre = new System.Windows.Forms.Label();
             this.authorTableAdapter = new Bibliotheque.bibliothequeDataSetTableAdapters.authorTableAdapter();
             this.btn_modif_client = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.bibliothequeDataSet1 = new Bibliotheque.bibliothequeDataSet1();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clientTableAdapter = new Bibliotheque.bibliothequeDataSet1TableAdapters.clientTableAdapter();
+            this.idclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fnameclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.townclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_client)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgridview_client
             // 
             this.dgridview_client.AllowUserToAddRows = false;
-            this.dgridview_client.AllowUserToOrderColumns = true;
+            this.dgridview_client.AutoGenerateColumns = false;
             this.dgridview_client.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgridview_client.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idclientDataGridViewTextBoxColumn,
+            this.Nom,
+            this.fnameclientDataGridViewTextBoxColumn,
+            this.phoneclientDataGridViewTextBoxColumn,
+            this.townclientDataGridViewTextBoxColumn});
+            this.dgridview_client.DataSource = this.clientBindingSource;
             this.dgridview_client.Location = new System.Drawing.Point(37, 213);
             this.dgridview_client.Name = "dgridview_client";
             this.dgridview_client.Size = new System.Drawing.Size(744, 218);
             this.dgridview_client.TabIndex = 14;
-            // 
-            // clientBindingSource
-            // 
-            this.clientBindingSource.DataMember = "client";
-            this.clientBindingSource.DataSource = this.bibliothequeDataSet1;
-            // 
-            // bibliothequeDataSet1
-            // 
-            this.bibliothequeDataSet1.DataSetName = "bibliothequeDataSet1";
-            this.bibliothequeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dgridview_client.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgridview_client_CellContentClick);
             // 
             // authorBindingSource
             // 
@@ -80,13 +84,12 @@
             this.bibliothequeDataSet.DataSetName = "bibliothequeDataSet";
             this.bibliothequeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtbox_recherche_client
+            // textBox1
             // 
-            this.txtbox_recherche_client.Location = new System.Drawing.Point(37, 166);
-            this.txtbox_recherche_client.Name = "txtbox_recherche_client";
-            this.txtbox_recherche_client.Size = new System.Drawing.Size(100, 20);
-            this.txtbox_recherche_client.TabIndex = 13;
-            this.txtbox_recherche_client.TextChanged += new System.EventHandler(this.txtbox_recherche_client_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(37, 166);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 13;
             // 
             // btn_supprClient
             // 
@@ -149,11 +152,64 @@
             this.btn_modif_client.TabIndex = 16;
             this.btn_modif_client.Text = "Modification client";
             this.btn_modif_client.UseVisualStyleBackColor = true;
-            this.btn_modif_client.Click += new System.EventHandler(this.btn_modif_client_Click_1);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(623, 116);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // bibliothequeDataSet1
+            // 
+            this.bibliothequeDataSet1.DataSetName = "bibliothequeDataSet1";
+            this.bibliothequeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataMember = "client";
+            this.clientBindingSource.DataSource = this.bibliothequeDataSet1;
             // 
             // clientTableAdapter
             // 
             this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // idclientDataGridViewTextBoxColumn
+            // 
+            this.idclientDataGridViewTextBoxColumn.DataPropertyName = "id_client";
+            this.idclientDataGridViewTextBoxColumn.HeaderText = "ID Client";
+            this.idclientDataGridViewTextBoxColumn.Name = "idclientDataGridViewTextBoxColumn";
+            this.idclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idclientDataGridViewTextBoxColumn.Width = 347;
+            // 
+            // Nom
+            // 
+            this.Nom.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nom.DataPropertyName = "name_client";
+            this.Nom.HeaderText = "Nom";
+            this.Nom.Name = "Nom";
+            // 
+            // fnameclientDataGridViewTextBoxColumn
+            // 
+            this.fnameclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.fnameclientDataGridViewTextBoxColumn.DataPropertyName = "fname_client";
+            this.fnameclientDataGridViewTextBoxColumn.HeaderText = "Prénom";
+            this.fnameclientDataGridViewTextBoxColumn.Name = "fnameclientDataGridViewTextBoxColumn";
+            // 
+            // phoneclientDataGridViewTextBoxColumn
+            // 
+            this.phoneclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.phoneclientDataGridViewTextBoxColumn.DataPropertyName = "phone_client";
+            this.phoneclientDataGridViewTextBoxColumn.HeaderText = "Téléphone";
+            this.phoneclientDataGridViewTextBoxColumn.Name = "phoneclientDataGridViewTextBoxColumn";
+            // 
+            // townclientDataGridViewTextBoxColumn
+            // 
+            this.townclientDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.townclientDataGridViewTextBoxColumn.DataPropertyName = "town_client";
+            this.townclientDataGridViewTextBoxColumn.HeaderText = "Ville";
+            this.townclientDataGridViewTextBoxColumn.Name = "townclientDataGridViewTextBoxColumn";
             // 
             // ListeClients
             // 
@@ -161,21 +217,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgridview_client);
-            this.Controls.Add(this.txtbox_recherche_client);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btn_supprClient);
             this.Controls.Add(this.btn_ajoutClient);
             this.Controls.Add(this.btn_accueil_clients);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Titre);
             this.Controls.Add(this.btn_modif_client);
+            this.Controls.Add(this.comboBox1);
             this.Name = "ListeClients";
             this.Text = "Bibliothèque - Liste clients";
             this.Load += new System.EventHandler(this.ListeClients_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_client)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bibliothequeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,7 +243,7 @@
         private System.Windows.Forms.DataGridView dgridview_client;
         private System.Windows.Forms.BindingSource authorBindingSource;
         private bibliothequeDataSet bibliothequeDataSet;
-        private System.Windows.Forms.TextBox txtbox_recherche_client;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_supprClient;
         private System.Windows.Forms.Button btn_ajoutClient;
         private System.Windows.Forms.Button btn_accueil_clients;
@@ -194,8 +251,14 @@
         private System.Windows.Forms.Label lbl_Titre;
         private bibliothequeDataSetTableAdapters.authorTableAdapter authorTableAdapter;
         private System.Windows.Forms.Button btn_modif_client;
+        private System.Windows.Forms.ComboBox comboBox1;
         private bibliothequeDataSet1 bibliothequeDataSet1;
         private System.Windows.Forms.BindingSource clientBindingSource;
         private bibliothequeDataSet1TableAdapters.clientTableAdapter clientTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idclientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fnameclientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneclientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn townclientDataGridViewTextBoxColumn;
     }
 }
