@@ -57,6 +57,7 @@
             this.btn_annulerGenre.TabIndex = 5;
             this.btn_annulerGenre.Text = "Annuler";
             this.btn_annulerGenre.UseVisualStyleBackColor = true;
+            this.btn_annulerGenre.Click += new System.EventHandler(this.btn_annulerGenre_Click);
             // 
             // btn_ajouterGenre
             // 
@@ -67,6 +68,7 @@
             this.btn_ajouterGenre.TabIndex = 2;
             this.btn_ajouterGenre.Text = "Ajouter";
             this.btn_ajouterGenre.UseVisualStyleBackColor = true;
+            this.btn_ajouterGenre.Click += new System.EventHandler(this.btn_ajouterGenre_Click);
             // 
             // txtbox_nom
             // 

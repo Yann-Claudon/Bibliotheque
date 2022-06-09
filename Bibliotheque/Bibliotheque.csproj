@@ -128,6 +128,12 @@
     <Compile Include="ListeEditeurs.Designer.cs">
       <DependentUpon>ListeEditeurs.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeGenres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeGenres.Designer.cs">
+      <DependentUpon>ListeGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListeLivres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeGenres.resx">
+      <DependentUpon>ListeGenres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeLivres.resx">
       <DependentUpon>ListeLivres.cs</DependentUpon>

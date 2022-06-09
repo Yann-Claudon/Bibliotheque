@@ -47,6 +47,7 @@
             this.btn_modifStatut.TabIndex = 39;
             this.btn_modifStatut.Text = "Modification statut";
             this.btn_modifStatut.UseVisualStyleBackColor = true;
+            this.btn_modifStatut.Click += new System.EventHandler(this.btn_modifStatut_Click);
             // 
             // dgridview_statut
             // 
@@ -65,6 +66,7 @@
             this.txtbox_searchStatut.Size = new System.Drawing.Size(100, 20);
             this.txtbox_searchStatut.TabIndex = 37;
             this.txtbox_searchStatut.Text = "Recherche statut";
+            this.txtbox_searchStatut.TextChanged += new System.EventHandler(this.txtbox_searchStatut_TextChanged);
             // 
             // btn_supprStatut
             // 
@@ -74,6 +76,7 @@
             this.btn_supprStatut.TabIndex = 36;
             this.btn_supprStatut.Text = "Suppression statut";
             this.btn_supprStatut.UseVisualStyleBackColor = true;
+            this.btn_supprStatut.Click += new System.EventHandler(this.btn_supprStatut_Click);
             // 
             // btn_ajoutStatut
             // 
@@ -83,6 +86,7 @@
             this.btn_ajoutStatut.TabIndex = 35;
             this.btn_ajoutStatut.Text = "Ajout statut";
             this.btn_ajoutStatut.UseVisualStyleBackColor = true;
+            this.btn_ajoutStatut.Click += new System.EventHandler(this.btn_ajoutStatut_Click);
             // 
             // btn_accueilStatut
             // 
@@ -92,6 +96,7 @@
             this.btn_accueilStatut.TabIndex = 34;
             this.btn_accueilStatut.Text = "Retour à l\'accueil";
             this.btn_accueilStatut.UseVisualStyleBackColor = true;
+            this.btn_accueilStatut.Click += new System.EventHandler(this.btn_accueilStatut_Click);
             // 
             // lbl_soustitre_statut
             // 
@@ -112,7 +117,7 @@
             this.lbl_titre_statut.TabIndex = 33;
             this.lbl_titre_statut.Text = "Bibliothèque";
             // 
-            // ListeStatut
+            // ListeStatuts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +130,7 @@
             this.Controls.Add(this.btn_accueilStatut);
             this.Controls.Add(this.lbl_soustitre_statut);
             this.Controls.Add(this.lbl_titre_statut);
-            this.Name = "ListeStatut";
+            this.Name = "ListeStatuts";
             this.Text = "ListeStatut";
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_statut)).EndInit();
             this.ResumeLayout(false);

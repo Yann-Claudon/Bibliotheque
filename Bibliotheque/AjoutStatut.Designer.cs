@@ -57,6 +57,7 @@
             this.btn_annulerStatut.TabIndex = 5;
             this.btn_annulerStatut.Text = "Annuler";
             this.btn_annulerStatut.UseVisualStyleBackColor = true;
+            this.btn_annulerStatut.Click += new System.EventHandler(this.btn_annulerStatut_Click);
             // 
             // btn_ajouterStatut
             // 
@@ -67,6 +68,7 @@
             this.btn_ajouterStatut.TabIndex = 2;
             this.btn_ajouterStatut.Text = "Ajouter";
             this.btn_ajouterStatut.UseVisualStyleBackColor = true;
+            this.btn_ajouterStatut.Click += new System.EventHandler(this.btn_ajouterStatut_Click);
             // 
             // txtbox_nom
             // 
@@ -76,7 +78,6 @@
             this.txtbox_nom.Size = new System.Drawing.Size(100, 25);
             this.txtbox_nom.TabIndex = 0;
             this.txtbox_nom.Text = "Statut";
-            this.txtbox_nom.TextChanged += new System.EventHandler(this.txtbox_nom_TextChanged);
             // 
             // AjoutStatut
             // 
