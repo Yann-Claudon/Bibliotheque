@@ -37,10 +37,10 @@
             this.dgridview_livre = new System.Windows.Forms.DataGridView();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliothequeBDD = new Bibliotheque.bibliothequeBDD();
+            this.bibliothequeBDD = new global::Bibliotheque.bibliothequeBDD();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.authorTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.authorTableAdapter();
-            this.bookTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
+            this.authorTableAdapter = new global::Bibliotheque.bibliothequeBDDTableAdapters.authorTableAdapter();
+            this.bookTableAdapter = new global::Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
             this.btn_modifier = new System.Windows.Forms.Button();
             this.txtbox_recherche = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_livre)).BeginInit();

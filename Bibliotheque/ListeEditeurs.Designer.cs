@@ -32,14 +32,14 @@
             this.btn_modifEditeur = new System.Windows.Forms.Button();
             this.dgridview_editeur = new System.Windows.Forms.DataGridView();
             this.editorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliothequeBDD = new Bibliotheque.bibliothequeBDD();
+            this.bibliothequeBDD = new global::Bibliotheque.bibliothequeBDD();
             this.txtbox_searchEditeur = new System.Windows.Forms.TextBox();
             this.btn_supprEditeur = new System.Windows.Forms.Button();
             this.btn_ajoutEditeur = new System.Windows.Forms.Button();
             this.btn_accueilEditeur = new System.Windows.Forms.Button();
             this.lbl_soustitre_editeur = new System.Windows.Forms.Label();
             this.lbl_titre_editeur = new System.Windows.Forms.Label();
-            this.editorTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.editorTableAdapter();
+            this.editorTableAdapter = new global::Bibliotheque.bibliothequeBDDTableAdapters.editorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_editeur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bibliothequeBDD)).BeginInit();
