@@ -40,6 +40,7 @@ namespace Bibliotheque{//pour les teuteus
             
             AjoutClient ajoutClient = new AjoutClient();
             ajoutClient.ShowDialog();
+            Close();
             
         }
 
