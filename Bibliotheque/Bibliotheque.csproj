@@ -47,12 +47,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="AjoutGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutGenre.Designer.cs">
+      <DependentUpon>AjoutGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutLivre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AjoutLivre.Designer.cs">
       <DependentUpon>AjoutLivre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutStatut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutStatut.Designer.cs">
+      <DependentUpon>AjoutStatut.cs</DependentUpon>
     </Compile>
     <Compile Include="bibliothequeBDD.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -70,24 +81,23 @@
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
-
-	  <Compile Include="bibliothequeDataSet1.Designer.cs">
-		  <AutoGen>True</AutoGen>
-		  <DesignTime>True</DesignTime>
-		  <DependentUpon>bibliothequeDataSet1.xsd</DependentUpon>
-	  </Compile>
-	  <Compile Include="AjoutClient.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="AjoutClient.Designer.cs">
-		  <DependentUpon>AjoutClient.cs</DependentUpon>
-	  </Compile>
-	  <Compile Include="ListeClients.cs">
-		  <SubType>Form</SubType>
-	  </Compile>
-	  <Compile Include="ListeClients.Designer.cs">
-		  <DependentUpon>ListeClients.cs</DependentUpon>
-	  </Compile>
+    <Compile Include="bibliothequeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bibliothequeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AjoutClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutClient.Designer.cs">
+      <DependentUpon>AjoutClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListeClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeClients.Designer.cs">
+      <DependentUpon>ListeClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutEditeur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +122,12 @@
     <Compile Include="ListeEditeurs.Designer.cs">
       <DependentUpon>ListeEditeurs.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeGenres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeGenres.Designer.cs">
+      <DependentUpon>ListeGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListeLivres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,14 +146,26 @@
     <Compile Include="AjoutAuteur.Designer.cs">
       <DependentUpon>AjoutAuteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeStatuts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeStatuts.Designer.cs">
+      <DependentUpon>ListeStatuts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AjoutClient.resx">
       <DependentUpon>AjoutClient.cs</DependentUpon>
     </EmbeddedResource>
-	  <EmbeddedResource Include="ListeClients.resx">
-		  <DependentUpon>ListeClients.cs</DependentUpon>
-	  </EmbeddedResource>
+    <EmbeddedResource Include="AjoutGenre.resx">
+      <DependentUpon>AjoutGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutStatut.resx">
+      <DependentUpon>AjoutStatut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeClients.resx">
+      <DependentUpon>ListeClients.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AjoutLivre.resx">
       <DependentUpon>AjoutLivre.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,11 +187,17 @@
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListeGenres.resx">
+      <DependentUpon>ListeGenres.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListeLivres.resx">
       <DependentUpon>ListeLivres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutAuteur.resx">
       <DependentUpon>AjoutAuteur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListeStatuts.resx">
+      <DependentUpon>ListeStatuts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

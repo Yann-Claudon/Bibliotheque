@@ -38,7 +38,7 @@
             this.btn_pretLivres = new System.Windows.Forms.Button();
             this.btn_planning = new System.Windows.Forms.Button();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.btn_status = new System.Windows.Forms.Button();
+            this.btn_statut = new System.Windows.Forms.Button();
             this.btn_formats = new System.Windows.Forms.Button();
             this.btn_editeurs = new System.Windows.Forms.Button();
             this.btn_genres = new System.Windows.Forms.Button();
@@ -107,7 +107,7 @@
             // 
             // btn_retourLivres
             // 
-            this.btn_retourLivres.Location = new System.Drawing.Point(68, 352);
+            this.btn_retourLivres.Location = new System.Drawing.Point(60, 351);
             this.btn_retourLivres.Name = "btn_retourLivres";
             this.btn_retourLivres.Size = new System.Drawing.Size(119, 23);
             this.btn_retourLivres.TabIndex = 6;
@@ -117,7 +117,7 @@
             // 
             // btn_pretLivres
             // 
-            this.btn_pretLivres.Location = new System.Drawing.Point(461, 352);
+            this.btn_pretLivres.Location = new System.Drawing.Point(453, 351);
             this.btn_pretLivres.Name = "btn_pretLivres";
             this.btn_pretLivres.Size = new System.Drawing.Size(119, 23);
             this.btn_pretLivres.TabIndex = 7;
@@ -139,15 +139,15 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 9;
             // 
-            // btn_status
+            // btn_statut
             // 
-            this.btn_status.Location = new System.Drawing.Point(341, 209);
-            this.btn_status.Name = "btn_status";
-            this.btn_status.Size = new System.Drawing.Size(119, 23);
-            this.btn_status.TabIndex = 12;
-            this.btn_status.Text = "Liste des status";
-            this.btn_status.UseVisualStyleBackColor = true;
-            this.btn_status.Click += new System.EventHandler(this.btn_status_Click);
+            this.btn_statut.Location = new System.Drawing.Point(341, 209);
+            this.btn_statut.Name = "btn_statut";
+            this.btn_statut.Size = new System.Drawing.Size(119, 23);
+            this.btn_statut.TabIndex = 12;
+            this.btn_statut.Text = "Liste des statuts";
+            this.btn_statut.UseVisualStyleBackColor = true;
+            this.btn_statut.Click += new System.EventHandler(this.btn_status_Click);
             // 
             // btn_formats
             // 
@@ -197,7 +197,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btn_emprunts);
             this.Controls.Add(this.btn_genres);
-            this.Controls.Add(this.btn_status);
+            this.Controls.Add(this.btn_statut);
             this.Controls.Add(this.btn_formats);
             this.Controls.Add(this.btn_editeurs);
             this.Controls.Add(this.monthCalendar1);
@@ -230,7 +230,7 @@
         private System.Windows.Forms.Button btn_pretLivres;
         private System.Windows.Forms.Button btn_planning;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Button btn_status;
+        private System.Windows.Forms.Button btn_statut;
         private System.Windows.Forms.Button btn_formats;
         private System.Windows.Forms.Button btn_editeurs;
         private System.Windows.Forms.Button btn_genres;
