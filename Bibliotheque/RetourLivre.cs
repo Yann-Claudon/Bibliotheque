@@ -75,6 +75,7 @@ namespace Bibliotheque{
                 cmd.Parameters.AddWithValue("@id_book", id_book);
                 cmd.Parameters.AddWithValue("@id_client", id_client);
                 cmd.ExecuteNonQuery();
+                //Modification du status du livre
                 SqlCommand cmdStatut = new SqlCommand("UPDATE book SET fk_status_book = @id_status WHERE id_book = @id_book", con);
                 cmdStatut.Parameters.AddWithValue("@id_book", id_book);
                 cmdStatut.Parameters.AddWithValue("@id_status", id_status);
@@ -99,6 +100,7 @@ namespace Bibliotheque{
             Close();
         }
 
+        //Fonction de remplissage des comboBox
         private void RetourLivre_Load(object sender, EventArgs e){
             load_Combobox("client", cmbbox_nomClient, "Nom du client");
             load_Combobox("book", cmbbox_livre, "Nom du livre");

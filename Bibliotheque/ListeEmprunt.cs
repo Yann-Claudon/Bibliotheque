@@ -64,8 +64,7 @@ namespace Bibliotheque{
         /*
          * Affiche le formulaire de retour d'un livre
          */
-        private void btn_retourLivre_Click(object sender, EventArgs e)
-        {
+        private void btn_retourLivre_Click(object sender, EventArgs e){
             RetourLivre retourLivre = new RetourLivre();
             retourLivre.ShowDialog();
             Close();
@@ -75,8 +74,7 @@ namespace Bibliotheque{
          * Ouvre une boite de dialogue pour choisir son imprimante puis une boite de dialogue de prévisualisation de l'impression
          */
         Bitmap bmp;
-        private void btn_imprimer_Click(object sender, EventArgs e)
-        {
+        private void btn_imprimer_Click(object sender, EventArgs e){
             printDialog1.ShowDialog();
             Graphics g = this.CreateGraphics();
             bmp = new Bitmap(this.Width, this.Height);
@@ -88,8 +86,7 @@ namespace Bibliotheque{
         /*
          * Imprime le Form
          */
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e){
             e.Graphics.DrawImage(bmp, 0, 0);
         }
     }

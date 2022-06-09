@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Bibliotheque
-{
-    public partial class ListeFormats : Form
-    {
-        public ListeFormats()
-        {
+namespace Bibliotheque{
+    public partial class ListeFormats : Form{
+        public ListeFormats(){
             InitializeComponent();
         }
 
-        private void ListeFormats_Load(object sender, EventArgs e)
-        {
+        private void ListeFormats_Load(object sender, EventArgs e){
             var select = "SELECT id_format as 'ID', name_format as 'Nom du format' FROM format";
             var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
             var dataAdapter = new SqlDataAdapter(select, c);
@@ -30,8 +26,7 @@ namespace Bibliotheque
             dgridview_format.DataSource = ds.Tables[0];
         }
 
-        private void txtbox_searchFormat_TextChanged(object sender, EventArgs e)
-        {
+        private void txtbox_searchFormat_TextChanged(object sender, EventArgs e){
             var select = "SELECT id_format AS 'ID', name_format AS 'Nom du format' FROM format WHERE name_format LIKE '%' + @Nom + '%'; ";
             var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
             var dataAdapter = new SqlDataAdapter(select, c);
@@ -42,8 +37,7 @@ namespace Bibliotheque
             dgridview_format.DataSource = ds.Tables[0];
         }
 
-        private void btn_ajoutFormat_Click(object sender, EventArgs e)
-        {
+        private void btn_ajoutFormat_Click(object sender, EventArgs e){
             AjoutFormat ajoutFormat = new AjoutFormat();
             ajoutFormat.ShowDialog();
             Close();
@@ -86,5 +80,6 @@ namespace Bibliotheque
             accueil.Show();
             Close();
         }
+
     }
 }

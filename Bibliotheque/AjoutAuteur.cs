@@ -49,8 +49,7 @@ namespace Bibliotheque
             }
 
             con.Close();
-            
-            MessageBox.Show("La création à été effectuée");
+
             
 
         }
