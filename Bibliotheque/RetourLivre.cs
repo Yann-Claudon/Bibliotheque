@@ -34,10 +34,11 @@ namespace Bibliotheque{
                 }
             }
         }
-        
-        
+
+
         //Fonction de retour de livre
-        private void btn_ajouterAuteur_Click(object sender, EventArgs e){
+        private void btn_ajouterAuteur_Click(object sender, EventArgs e)
+        {
             SqlConnection con = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True");
             con.Open();
             SqlCommand cmdbook = new SqlCommand("SELECT id_book FROM book WHERE name_book LIKE '" + cmbbox_livre.Text + "'", con);
@@ -59,22 +60,39 @@ namespace Bibliotheque{
             int id_status = Convert.ToInt32(drstatus["id_status"]);
             drstatus.Close();
 
-            SqlCommand cmd = new SqlCommand("DELETE FROM loan WHERE fk_book_loan = @id_book AND fk_client_loan = @id_client", con);
-            cmd.Parameters.AddWithValue("@id_book", id_book);
-            cmd.Parameters.AddWithValue("@id_client", id_client);
-            cmd.ExecuteNonQuery();
-            SqlCommand cmdStatut = new SqlCommand("UPDATE book SET fk_status_book = @id_status WHERE id_book = @id_book", con);
-            cmdStatut.Parameters.AddWithValue("@id_book", id_book);
-            cmdStatut.Parameters.AddWithValue("@id_status", id_status);
-            cmdStatut.ExecuteNonQuery();
-            con.Close();
-            MessageBox.Show("Retour du livre avec succès");
-            ListeEmprunt liste = new ListeEmprunt();
-            liste.Show();
-            Close();
+            //Verification qu'un livre est emprunté
+            SqlCommand cmdverif = new SqlCommand("SELECT id_loan FROM loan WHERE fk_book_loan = @id_book AND fk_client_loan = @id_client", con);
+            cmdverif.Parameters.AddWithValue("@id_book", id_book);
+            cmdverif.Parameters.AddWithValue("@id_client", id_client);
+            SqlDataReader drverif = cmdverif.ExecuteReader();
+            if (drverif.HasRows)
+            {
+                drverif.Read();
+                int id_loan = Convert.ToInt32(drverif["id_loan"]);
+                drverif.Close();
+                //Modification du status du livre
+                SqlCommand cmd = new SqlCommand("DELETE FROM loan WHERE fk_book_loan = @id_book AND fk_client_loan = @id_client", con);
+                cmd.Parameters.AddWithValue("@id_book", id_book);
+                cmd.Parameters.AddWithValue("@id_client", id_client);
+                cmd.ExecuteNonQuery();
+                SqlCommand cmdStatut = new SqlCommand("UPDATE book SET fk_status_book = @id_status WHERE id_book = @id_book", con);
+                cmdStatut.Parameters.AddWithValue("@id_book", id_book);
+                cmdStatut.Parameters.AddWithValue("@id_status", id_status);
+                cmdStatut.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Retour du livre avec succès");
+                ListeEmprunt liste = new ListeEmprunt();
+                liste.Show();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Ce livre n'est pas emprunté");
+                con.Close();
+            }
         }
 
-        //Bouton pour annuler le retour d'un livre qui renvoie à la page liste des emprunts
+            //Bouton pour annuler le retour d'un livre qui renvoie à la page liste des emprunts
         private void btn_annulerAuteur_Click(object sender, EventArgs e){
             ListeEmprunt liste = new ListeEmprunt();
             liste.Show();
