@@ -47,23 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AjoutGenre.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AjoutGenre.Designer.cs">
-      <DependentUpon>AjoutGenre.cs</DependentUpon>
-    </Compile>
     <Compile Include="AjoutLivre.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AjoutLivre.Designer.cs">
       <DependentUpon>AjoutLivre.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AjoutStatut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AjoutStatut.Designer.cs">
-      <DependentUpon>AjoutStatut.cs</DependentUpon>
     </Compile>
     <Compile Include="bibliothequeBDD.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -110,6 +98,12 @@
     <Compile Include="AjoutFormat.Designer.cs">
       <DependentUpon>AjoutFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListeEmprunt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeEmprunt.Designer.cs">
+      <DependentUpon>ListeEmprunt.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListeFormats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +115,6 @@
     </Compile>
     <Compile Include="ListeEditeurs.Designer.cs">
       <DependentUpon>ListeEditeurs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListeGenres.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListeGenres.Designer.cs">
-      <DependentUpon>ListeGenres.cs</DependentUpon>
     </Compile>
     <Compile Include="ListeLivres.cs">
       <SubType>Form</SubType>
@@ -146,22 +134,22 @@
     <Compile Include="AjoutAuteur.Designer.cs">
       <DependentUpon>AjoutAuteur.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListeStatuts.cs">
+    <Compile Include="PretLivre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListeStatuts.Designer.cs">
-      <DependentUpon>ListeStatuts.cs</DependentUpon>
+    <Compile Include="PretLivre.Designer.cs">
+      <DependentUpon>PretLivre.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RetourLivre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetourLivre.Designer.cs">
+      <DependentUpon>RetourLivre.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AjoutClient.resx">
       <DependentUpon>AjoutClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AjoutGenre.resx">
-      <DependentUpon>AjoutGenre.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AjoutStatut.resx">
-      <DependentUpon>AjoutStatut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeClients.resx">
       <DependentUpon>ListeClients.cs</DependentUpon>
@@ -175,6 +163,9 @@
     <EmbeddedResource Include="AjoutFormat.resx">
       <DependentUpon>AjoutFormat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListeEmprunt.resx">
+      <DependentUpon>ListeEmprunt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListeFormats.resx">
       <DependentUpon>ListeFormats.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,17 +178,14 @@
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeGenres.resx">
-      <DependentUpon>ListeGenres.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ListeLivres.resx">
       <DependentUpon>ListeLivres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutAuteur.resx">
       <DependentUpon>AjoutAuteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListeStatuts.resx">
-      <DependentUpon>ListeStatuts.cs</DependentUpon>
+    <EmbeddedResource Include="PretLivre.resx">
+      <DependentUpon>PretLivre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -208,6 +196,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RetourLivre.resx">
+      <DependentUpon>RetourLivre.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bibliothequeBDD.xsc">
       <DependentUpon>bibliothequeBDD.xsd</DependentUpon>
     </None>

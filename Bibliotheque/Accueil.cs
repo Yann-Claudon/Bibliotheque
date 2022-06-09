@@ -22,11 +22,6 @@ namespace Bibliotheque
 
         }
 
-        private void btn_retourLivres_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_auteurs_Click(object sender, EventArgs e)
         {
             ListeAuteurs auteur = new ListeAuteurs();
@@ -41,6 +36,7 @@ namespace Bibliotheque
             Hide();
         }
 
+
         private void btn_formats_Click(object sender, EventArgs e)
         {
             ListeFormats listeFormats = new ListeFormats();
@@ -50,10 +46,10 @@ namespace Bibliotheque
 
         private void btn_status_Click(object sender, EventArgs e)
         {
-            ListeStatuts listeStatuts = new ListeStatuts();
-            listeStatuts.Show();
+            /*ListeStatus listeStatus = new ListeStatus();
+            listeStatus.Show();
             Close();
-            
+            */
         }
 
         private void btn_genres_Click(object sender, EventArgs e)
@@ -66,7 +62,9 @@ namespace Bibliotheque
 
         private void btn_emprunts_Click(object sender, EventArgs e)
         {
-
+            ListeEmprunt listeEmprunt = new ListeEmprunt();
+            listeEmprunt.Show();
+            Hide();
         }
 
         private void btn_editeurs_Click(object sender, EventArgs e)
