@@ -59,6 +59,12 @@
     <Compile Include="AjoutLivre.Designer.cs">
       <DependentUpon>AjoutLivre.cs</DependentUpon>
     </Compile>
+    <Compile Include="AjoutStatut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutStatut.Designer.cs">
+      <DependentUpon>AjoutStatut.cs</DependentUpon>
+    </Compile>
     <Compile Include="bibliothequeBDD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AjoutGenre.resx">
       <DependentUpon>AjoutGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutStatut.resx">
+      <DependentUpon>AjoutStatut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeClients.resx">
       <DependentUpon>ListeClients.cs</DependentUpon>
