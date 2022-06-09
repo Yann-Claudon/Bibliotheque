@@ -118,7 +118,9 @@ namespace Bibliotheque{
             cmd.Parameters.AddWithValue("@Status", id_etat);
 
             // Vérification si le livre existe déjà dans la base de données
-            SqlCommand cmdverif = new SqlCommand("SELECT name_book, publish_date_book, fk_genre_book, fk_editor_book, fk_author_book, fk_format_book, fk_status_book FROM book WHERE name_book LIKE '" + txtbox_nom.Text + "'AND publish_date_book LIKE '" + txtbox_datePublication + "' AND fk_genre_book LIKE '"+ id_genre + "AND fk_editor_book LIKE '" + id_genre + "AND fk_author_book LIKE '"+id_auteur+ "AND fk_format_book LIKE '"+id_format+ "AND fk_status_book LIKE"+id_etat, con);
+            
+            SqlCommand cmdverif = new SqlCommand("SELECT name_book, publish_date_book, fk_genre_book, fk_editor_book, fk_author_book, fk_format_book, fk_status_book FROM book WHERE name_book LIKE '" + txtbox_nom.Text + "'AND publish_date_book LIKE '" + txtbox_datePublication + "' AND fk_genre_book = "+ id_genre + "AND fk_editor_book = " + id_genre + "AND fk_author_book = "+id_auteur+ "AND fk_format_book = "+id_format+ "AND fk_status_book ="+id_etat, con);
+            MessageBox.Show("Id genre : " + id_genre + " Id etat : " + id_etat + " Id editeur : " + id_editeur + " Id auteur : " + id_auteur + " Id format : " + id_format);
             SqlDataReader drverif = cmdverif.ExecuteReader();
             drverif.Read();
             if (!drverif.HasRows){

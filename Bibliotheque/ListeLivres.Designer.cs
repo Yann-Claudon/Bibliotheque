@@ -37,11 +37,10 @@
             this.dgridview_livre = new System.Windows.Forms.DataGridView();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bibliothequeBDDBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bibliothequeBDD = new global::Bibliotheque.bibliothequeBDD();
+            this.bibliothequeBDD = new Bibliotheque.bibliothequeBDD();
             this.authorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.authorTableAdapter = new global::Bibliotheque.bibliothequeBDDTableAdapters.authorTableAdapter();
-            this.bookTableAdapter = new global::Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
-            this.btn_modifier = new System.Windows.Forms.Button();
+            this.authorTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.authorTableAdapter();
+            this.bookTableAdapter = new Bibliotheque.bibliothequeBDDTableAdapters.bookTableAdapter();
             this.txtbox_recherche = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_livre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
@@ -140,16 +139,6 @@
             // 
             this.bookTableAdapter.ClearBeforeFill = true;
             // 
-            // btn_modifier
-            // 
-            this.btn_modifier.Location = new System.Drawing.Point(333, 119);
-            this.btn_modifier.Name = "btn_modifier";
-            this.btn_modifier.Size = new System.Drawing.Size(119, 23);
-            this.btn_modifier.TabIndex = 8;
-            this.btn_modifier.Text = "Modifier livre";
-            this.btn_modifier.UseVisualStyleBackColor = true;
-            this.btn_modifier.Click += new System.EventHandler(this.btn_modifier_Click);
-            // 
             // txtbox_recherche
             // 
             this.txtbox_recherche.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -166,7 +155,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtbox_recherche);
-            this.Controls.Add(this.btn_modifier);
             this.Controls.Add(this.dgridview_livre);
             this.Controls.Add(this.btn_accueil);
             this.Controls.Add(this.btn_supressionLivre);
@@ -200,7 +188,6 @@
         private bibliothequeBDDTableAdapters.authorTableAdapter authorTableAdapter;
         private System.Windows.Forms.BindingSource bookBindingSource;
         private bibliothequeBDDTableAdapters.bookTableAdapter bookTableAdapter;
-        private System.Windows.Forms.Button btn_modifier;
         private System.Windows.Forms.TextBox txtbox_recherche;
     }
 }
