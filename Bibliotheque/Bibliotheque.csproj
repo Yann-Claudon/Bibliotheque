@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutGenre.Designer.cs">
+      <DependentUpon>AjoutGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="AjoutLivre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="AjoutClient.resx">
       <DependentUpon>AjoutClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AjoutGenre.resx">
+      <DependentUpon>AjoutGenre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListeClients.resx">
       <DependentUpon>ListeClients.cs</DependentUpon>
