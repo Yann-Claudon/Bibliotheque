@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="ListeStatuts.Designer.cs">
       <DependentUpon>ListeStatuts.cs</DependentUpon>
+	</Compile>
     <Compile Include="PretLivre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +219,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListeStatuts.resx">
       <DependentUpon>ListeStatuts.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="PretLivre.resx">
       <DependentUpon>PretLivre.cs</DependentUpon>
     </EmbeddedResource>
