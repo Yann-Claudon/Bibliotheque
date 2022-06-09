@@ -18,23 +18,7 @@ namespace Bibliotheque
             InitializeComponent();
         }
 
-        private void ListeGenres_Load(object sender, EventArgs e)
-        {
-            //Récupération des genres
-            var select = "SELECT id_genre as 'ID', name_genre as 'Nom du genre' FROM genre";
-            //Connection à la base de données
-            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
-            //Requête SQL
-            var dataAdapter = new SqlDataAdapter(select, c);
-            //Affectation du résultat de la requête à une variable de type DataTable
-            var commandBuilder = new SqlCommandBuilder(dataAdapter);
-            //Création du dataset            
-            var ds = new DataSet();
-            //Remplissage du dataset
-            dataAdapter.Fill(ds);
-            //Affichage du résultat dans le DataGridView
-            dgridview_genre.DataSource = ds.Tables[0];
-        }
+
 
         private void txtbox_searchGenre_TextChanged(object sender, EventArgs e)
         {
@@ -116,6 +100,24 @@ namespace Bibliotheque
             accueil.Show();
             //Fermeture de la fenêtre ListeGenres
             Close();
+        }
+
+        private void ListeGenres_Load_1(object sender, EventArgs e)
+        {
+            //Récupération des genres
+            var select = "SELECT id_genre as 'ID', name_genre as 'Nom du genre' FROM genre";
+            //Connection à la base de données
+            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
+            //Requête SQL
+            var dataAdapter = new SqlDataAdapter(select, c);
+            //Affectation du résultat de la requête à une variable de type DataTable
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            //Création du dataset            
+            var ds = new DataSet();
+            //Remplissage du dataset
+            dataAdapter.Fill(ds);
+            //Affichage du résultat dans le DataGridView
+            dgridview_genre.DataSource = ds.Tables[0];
         }
     }
 }

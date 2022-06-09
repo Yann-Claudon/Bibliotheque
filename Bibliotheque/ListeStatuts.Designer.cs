@@ -132,6 +132,7 @@
             this.Controls.Add(this.lbl_titre_statut);
             this.Name = "ListeStatuts";
             this.Text = "ListeStatut";
+            this.Load += new System.EventHandler(this.ListeStatuts_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_statut)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

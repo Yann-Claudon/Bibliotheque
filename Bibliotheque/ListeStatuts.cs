@@ -19,17 +19,7 @@ namespace Bibliotheque
             InitializeComponent();
         }
 
-        private void ListeStatuts_Load(object sender, EventArgs e)
-        {
-            var select = "SELECT id_status as 'ID', name_status as 'Nom du status' FROM status";
-            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
-            var dataAdapter = new SqlDataAdapter(select, c);
-
-            var commandBuilder = new SqlCommandBuilder(dataAdapter);
-            var ds = new DataSet();
-            dataAdapter.Fill(ds);
-            dgridview_statut.DataSource = ds.Tables[0];
-        }
+ 
 
         private void txtbox_searchStatut_TextChanged(object sender, EventArgs e)
         {
@@ -94,6 +84,19 @@ namespace Bibliotheque
             accueil.Show();
             //Fermeture de la fenêtre ListeGenres
             Close();
+        }
+
+        private void ListeStatuts_Load_1(object sender, EventArgs e)
+        {
+            var select = "SELECT id_status as 'ID', name_status as 'Nom du status' FROM status";
+            var c = new SqlConnection("Data Source=.\\sqlexpress;Initial Catalog=bibliotheque;Integrated Security=True"); // Your Connection String here
+            var dataAdapter = new SqlDataAdapter(select, c);
+
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dgridview_statut.DataSource = ds.Tables[0];
+
         }
     }
 }

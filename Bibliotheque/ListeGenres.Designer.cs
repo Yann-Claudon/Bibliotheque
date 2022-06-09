@@ -132,6 +132,7 @@
             this.Controls.Add(this.lbl_titre_genre);
             this.Name = "ListeGenres";
             this.Text = "ListeGenres";
+            this.Load += new System.EventHandler(this.ListeGenres_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgridview_genre)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
