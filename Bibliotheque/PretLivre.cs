@@ -55,6 +55,8 @@ namespace Bibliotheque{
          * Ferme le formulaire lors du clic sur le bouton annuler
          */
         private void btn_annulerAuteur_Click(object sender, EventArgs e){
+            ListeEmprunt liste = new ListeEmprunt();
+            liste.Show();
             Close();
         }
 
@@ -84,7 +86,10 @@ namespace Bibliotheque{
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Livre prêté avec succès");
+            ListeEmprunt liste = new ListeEmprunt();
+            liste.Show();
             Close();
+            
         }
     }
 }

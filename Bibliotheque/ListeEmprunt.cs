@@ -23,6 +23,7 @@ namespace Bibliotheque{
         private void btn_pretLivre_Click(object sender, EventArgs e){
             PretLivre pretLivre = new PretLivre();
             pretLivre.ShowDialog();
+            Close();
         }
         /*
          * Ferme la page actuelle et ouvre la page d'accueil
@@ -67,6 +68,7 @@ namespace Bibliotheque{
         {
             RetourLivre retourLivre = new RetourLivre();
             retourLivre.ShowDialog();
+            Close();
         }
 
         /*
